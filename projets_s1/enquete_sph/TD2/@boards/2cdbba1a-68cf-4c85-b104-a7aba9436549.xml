@@ -1,0 +1,2735 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<board bypass-restricted-results-access="0" version="1.0.10">
+  <name>
+    <fr><![CDATA[imane]]></fr>
+  </name>
+  <options cascadingfilters="1" displaysampleinfo="1" displaysampleonanalysis="1" enableresponsive="0" displaynavigationbuttons="1" displaypaginationbar="1" paginationposition="Bottom">
+    <pageformat device-type="Desktop" width="1370" height="768" />
+    <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+      <filtering-options />
+      <header-format type="TEXT" size="24" />
+      <thresholds>
+        <ff ts="0.01" s="0.05" ps="0.15" />
+        <fn ts="0.01" s="0.05" ps="0.15" />
+        <nn ts="0.8" s="0.6" ps="0.4" />
+      </thresholds>
+    </format>
+    <runtimeexport allowexport="0" />
+  </options>
+  <skin id="ff6a112a-32ca-c2cf-f90e-8c88e97143d7" name="SphinxDefaultSkin">
+    <colorset gradient="1" type="Monocolor">
+      <colors>#64255a;#ab81a4;#d9c4d6;#cecece</colors>
+    </colorset>
+    <boardstyle background="#FFFFFF" viewbackground="rgba(101, 92, 100, 0.1)">
+      <borderstyle color="transparent" thickness="1" style="solid" radius="0" />
+    </boardstyle>
+    <analysisstyle background="transparent" significativepositivevalue="#3d8eb9" significativenegativevalue="#ea4c87">
+      <borderstyle color="transparent" thickness="1" style="solid" radius="0" />
+      <titlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="14" color="#333" fontweight="1" fontstyle="0" />
+      <metricstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="1" />
+      <teststatstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="1" />
+    </analysisstyle>
+    <chartstyle verbatimfontfamily="Arial, Helvetica, sans-serif" backgroundcolor="transparent" xychartkeepthickness="1" animate="1">
+      <datalabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" automatic="1" />
+      <axevaluestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <axetitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <legendstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+      <indicatorvalue fontfamily="Arial, Helvetica, sans-serif" fontsize="96" color="#333" fontweight="1" fontstyle="0" automatic="1" automaticfontsize="1" />
+      <indicatorvaluelabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <gaugeextremitylabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <filliconlabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <filliconvaluelabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#d6d6d6" fontweight="0" fontstyle="0" />
+      <separatorstyle color="#333" thickness="2" style="dashed" />
+      <xychartthickness enable="0" thickness="10" />
+    </chartstyle>
+    <tablestyle hovercolor="rgba(0, 0, 0, 0.15)" alternatingprincipalcolor="rgba(255, 255, 255, 0)" alternatingsecondcolor="rgba(0, 0, 0, 0.03)" totalbackgroundcolor="rgba(0, 0, 0, 0.07)" bordercolor="rgba(0, 0, 0, 0.1)" headercolor="transparent" cellchartbackgroundcolor="transparent">
+      <columntitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+      <linetitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <cellstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <cellchartstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="11" color="#333" fontweight="0" fontstyle="0" automatic="1" />
+    </tablestyle>
+    <characteristicstablestyle>
+      <columntitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+      <linetitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <cellstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+    </characteristicstablestyle>
+    <shapestyle fillcolor="#64255a">
+      <borderstyle color="#333" thickness="1" style="solid" radius="0" />
+    </shapestyle>
+    <imagestyle effect="None" color="transparent" />
+    <viewtextstyle backgroundcolor="transparent">
+      <borderstyle color="transparent" thickness="1" style="solid" radius="0" />
+    </viewtextstyle>
+    <relationstyle>
+      <linestyle color="black" thickness="1" style="solid" />
+      <colors>rgb(255, 255, 255);rgb(202, 217, 210);rgb(143, 206, 174);rgb(11, 201, 106);rgb(255, 255, 255);rgb(202, 217, 210);rgb(143, 206, 174);rgb(11, 201, 106)</colors>
+    </relationstyle>
+  </skin>
+  <dataproviders>
+    <provider type="WebSurvey" account="iq" survey="EnqueteSanteIQ3" id="4318a03e-2155-478e-be91-1771bed7c7db" />
+  </dataproviders>
+  <filters device-type="Desktop" />
+  <pages device-type="Desktop">
+    <canvas id="ab24e8a6-3c3e-4a00-80d2-7dd0251d510a">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="1685211715-fe0ebf55-6832-4751-88a4-d2ef4c0ee805" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Vous êtes :]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1685211715" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1685211715" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="29471936-98d66d60-beb1-42e0-8cd5-4232cb7279b8" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Dans quelle tranche d'âge vous situez-vous?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="29471936" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="29471936" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="798561351-d2cc6be6-3eb3-4050-a885-7218c8d7d975" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Quel est votre département géographique d'origine?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="XYAxisChart" placement="Right">
+          <legend show="0" horizontalalign="center" verticalalign="bottom" layout="horizontal" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="0" showcontentvalue="1" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <xyaxischart charttype="Column" add_aggregated_values="0" showresultsbutton="0">
+            <chartheight enabled="0" value="150" />
+            <rlnoptions threshold="5" stepbystep="1" computevif="1" />
+          </xyaxischart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="798561351" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="798561351" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="842709949-5aa36838-0b3e-46df-a392-df399d3b4c0d" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Dans quel département de formation êtes-vous inscrit?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="842709949" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="842709949" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="97fefb43-2a93-4fd6-af25-ff0a06e0fec1">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="659888742-b1d53154-d3c3-4235-a241-5c9e97d2d63c" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Quel est votre niveau de formation?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="659888742" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="659888742" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1142968801-de539a82-172b-4b63-8e1a-00db00de5c1e" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si vous êtes en licence pro, êtes-vous alternant?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1142968801" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1142968801" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1255263262-d39c7eb0-5645-489a-9be2-372423e229c7" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Bénéficiez-vous d'une bourse d'enseignement supérieur?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1255263262" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1255263262" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1732732573-4ebf1c63-c42f-4673-8bf8-85c1734786c3" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Avez-vous un travail rémunéré régulier pendant vos études?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1732732573" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1732732573" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="30ce6d1e-55cf-4752-a7a7-0d3d351a57c7">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="1768041268-50e74790-0ad6-46ea-9bfb-e4d38b1c548b" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Dans le cadre de vos études à Niort, vous êtes :]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1768041268" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1768041268" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="413685028-47a81ac1-8ad4-4757-bb79-dda6f0993cba" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Vous diriez que le niveau de revenu de votre famille est plutôt :]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="413685028" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="413685028" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="902321569-7453cbc3-97c6-4f3b-8be8-b90e3f29e46a" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Avez-vous des difficultés à gérer votre budget étudiant]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="902321569" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="902321569" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="449006218-cb3f0512-48df-4996-9085-6f39f1d47c3e" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Etes-vous fumeur?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="449006218" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="449006218" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="6ee4940f-300f-49c5-ab5b-4f7e903304e0">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="2076232929-06eaf893-8bcd-45f4-9f89-af57d7289207" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Combien de cigarettes fumez-vous par jour?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="2076232929" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="2076232929" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1934354439-129fbc0f-ffa5-47f5-8dfa-4b4ac974e094" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Etes-vous consommateur d'alcool?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1934354439" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1934354439" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="679449711-1ca0108b-452f-4a6c-8e25-fc5b003422cd" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si oui, à quelle fréquence?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="679449711" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="679449711" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="356791402-b8ac2cbc-3e32-47ea-a2d2-e900cd57a4fc" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si oui, au cours du mois dernier, combien de fois avez-vous été ivre?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="356791402" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="356791402" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="6e0dcd1b-c2ee-408e-8eca-c992e2fe4e28">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="2081535109-ad1174b4-b175-457d-8e92-3eb7830c6853" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Estimez la qualité de votre sommeil]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="2081535109" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="2081535109" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1138825667-cd9c282b-0bc2-4852-8264-ee86809715c2" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Combien de temps passez-vous chaque jour devant les écrans?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1138825667" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1138825667" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1239090782-a08af63c-bdf0-4547-a057-27f685507716" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Estimez-vous être attentif à votre alimentation?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1239090782" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1239090782" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="497995333-e9e45e6d-e6db-4771-9862-06bbf1a300fa" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Votre poids est-il un souci pour vous?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="497995333" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="497995333" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="20371869-7565-4d5d-b717-06b3c6fd9dce">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="1982482875-0ebd5eb2-90e8-401d-952a-4f959175f457" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Faites-vous du sport actuellement?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1982482875" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1982482875" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="44829241-32ba9c2a-4bb0-47aa-9d97-523867e04b4a" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si non, pour quelle(s) raison(s)]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="Obs" percentchart="None" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="XYAxisChart" placement="Right">
+          <legend show="0" horizontalalign="center" verticalalign="bottom" layout="horizontal" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="0" showcontentvalue="1" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <xyaxischart charttype="Bar" add_aggregated_values="0" showresultsbutton="0">
+            <chartwidth enabled="0" value="250" />
+            <rlnoptions threshold="5" stepbystep="1" computevif="1" />
+          </xyaxischart>
+          <values count="0" percent="Obs" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="44829241" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="44829241" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="732749073-22479abc-c1a0-4823-b34b-b5ca9bdbe624" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si non, faisiez-vous du sport avant d'intégrer l'IUT (en dehors du sport obligatoire dans les établissements scolaires)?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="732749073" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="732749073" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="806257044-45484c62-a7ec-4341-b1d0-228594ada877" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Souffrez-vous d'un problème de santé récurrent?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="806257044" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="806257044" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="e8fe8659-6cd4-49ae-b056-fc0aec607ca6">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="1948741552-e376565a-ef88-4de0-a5fd-b86f3aa1144b" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Etes-vous suivi régulièrement par un médecin?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1948741552" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1948741552" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1347802229-2d824559-436d-402b-9444-c3e4cd9f0c8b" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Vous arrive t-il de pratiquer l'auto-médication?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1347802229" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1347802229" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1078308713-a7c605a3-7631-4ecd-88df-f9a0e8c78360" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[A quel organisme de sécurité sociale êtes-vous affilié?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1078308713" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1078308713" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1668438270-77acbf0c-7c36-440d-8eee-c2430f94b27f" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Avez-vous une mutuelle?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1668438270" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1668438270" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="7d69d05d-944e-4d89-b589-d3915ea30577">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="420707486-48af4dfa-d66a-4653-83a5-489bdce468b0" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si oui, quelle mutuelle?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="420707486" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="420707486" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="797899319-b5c8d8d9-0e67-49d4-9cb3-ff2a2aa629cd" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Vous est-il déjà arrivé de renoncer à des soins?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="797899319" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="797899319" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="2075154855-80b9ae95-a153-4f68-aee7-73456cb1fae3" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si oui, pour quelle raison principale?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="2075154855" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="2075154855" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="20193461-fb30217c-1221-4233-a655-5dff56e50fcb" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Etes-vous satisfait de votre couverture santé?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="20193461" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="20193461" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="4be123d2-1cf2-46cc-8963-33e338847b69">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="424503714-62943c1d-2cb6-480f-bfc3-0768db88565c" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Si non, pour quelle(s) raison(s)?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="Obs" percentchart="None" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="XYAxisChart" placement="Right">
+          <legend show="0" horizontalalign="center" verticalalign="bottom" layout="horizontal" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="0" showcontentvalue="1" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <xyaxischart charttype="Bar" add_aggregated_values="0" showresultsbutton="0">
+            <chartwidth enabled="0" value="250" />
+            <rlnoptions threshold="5" stepbystep="1" computevif="1" />
+          </xyaxischart>
+          <values count="0" percent="Obs" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="424503714" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="424503714" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="822857897-36bf1f72-b77f-40f2-82be-941d2f7c1e5d" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Vous sentez-vous stressé?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="822857897" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="822857897" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="2107729986-d92655af-6064-4469-959e-af2968521249" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Estimez-vous que vous êtes fatigué?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="2107729986" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="2107729986" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1686209413-d3fcff03-5c3e-4fad-a2ba-a2c3c7c3a804" canvas-top="390" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="4" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Estimez votre état de santé actuel :]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1686209413" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1686209413" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+    <canvas id="96bb8731-4f89-4ee4-bdd8-97d45ca445de">
+      <page-name>
+        <fr><![CDATA[]]></fr>
+      </page-name>
+      <analysis id="1618599443-52c2172b-f07a-48ad-9b97-17363956c76b" canvas-top="0" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Vous considérez que votre état de santé depuis votre entrée dans les études supérieures :]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1618599443" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1618599443" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="903265633-f2f1df73-65ab-45ec-a20b-586e070aaf55" canvas-top="0" canvas-left="680" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="2" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Estimez-vous que votre état de santé a une influence négative sur vos résultats universitaires?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="903265633" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="903265633" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+      <analysis id="1752617305-e2b8d413-d0f5-471c-8764-d67970bcac7b" canvas-top="390" canvas-left="0" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="3" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Votre santé future est-elle une préoccupation?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="1" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" selected="PieChart" placement="Right">
+          <legend show="0" horizontalalign="right" verticalalign="middle" layout="vertical" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="1" showcontentvalue="1" distance="15" usewidth="1" width="100" texttrim="Wrap" />
+          <grid showgrid="0" showgraduations="1" />
+          <zoom enable="0" />
+          <piechart innersize="0%" startangle="0" endangle="360">
+            <diameter enabled="0" value="200" />
+            <display />
+          </piechart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="0" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="1752617305" />
+            <provider id="4318a03e-2155-478e-be91-1771bed7c7db">
+              <item id="1752617305" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+  </pages>
+</board>

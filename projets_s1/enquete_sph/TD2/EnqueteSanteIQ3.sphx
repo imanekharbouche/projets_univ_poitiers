@@ -1,0 +1,4390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sphinx>
+  <questionnaire version="3.6" build="0" writer="io 3.6">
+    <header>
+      <history>7.2.3.0(IUT NIORT);7.3.0.1(IUT NIORT);7.2.3.0(IUT NIORT);7.3.0.1(IUT NIORT);7.4.6.2(IUT NIORT);8.5.2(IUT NIORT);8.5.2(DEMO Juin 2023);8.6.1(UNIVERSITE DE POITIERS);8.5.2(UNIVERSITE DE POITIERS);8.6.1(UNIVERSITE DE POITIERS);8.7.2(UNIVERSITE DE POITIERS);</history>
+      <langs current="FR">
+        <lang>FR</lang>
+      </langs>
+      <title>
+        <fr>Enquête Santé</fr>
+      </title>
+      <comments />
+      <period />
+      <organism />
+    </header>
+    <items>
+      <part id="1982593003" name="Pour_mieux_vous_connaitre" isexpanded="1">
+        <label>
+          <fr>Pour mieux vous connaître</fr>
+        </label>
+        <shortlabel />
+        <variable type="FU" id="1685211715" name="sexe">
+          <label>
+            <fr>Vous êtes :</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="EBZP2B">
+              <label>
+                <fr>Une femme</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="79QQCQ">
+              <label>
+                <fr>Un homme</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="29471936" name="Age">
+          <label>
+            <fr>Dans quelle tranche d'âge vous situez-vous?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="UNYL6K">
+              <label>
+                <fr>Moins de 19 ans</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="5CYDWF">
+              <label>
+                <fr>19 à 21 ans</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="SDZ5ZG">
+              <label>
+                <fr>22 à 23 ans</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="H4XQNQ">
+              <label>
+                <fr>Plus de 23 ans</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="798561351" name="Deptgeo">
+          <label>
+            <fr>Quel est votre département géographique d'origine?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>Une question "Si Autre, précisez" est associée à cette question.</fr>
+          </instruction>
+          <alert />
+          <attributes otherprecise="1" />
+          <modalities>
+            <m id="A6879E">
+              <label>
+                <fr>79</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="4GB8NQ">
+              <label>
+                <fr>86</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="J2X7TT">
+              <label>
+                <fr>16</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="LANU6X">
+              <label>
+                <fr>17</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="KBJJGH">
+              <label>
+                <fr>85</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="3E9HK9">
+              <label>
+                <fr>Autre</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="OT" id="1007329886" name="Deptgeo_Autre" cordial="0">
+          <label>
+            <fr>Si 'Autre' précisez :</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <text nbcharline="0" nblines="1" />
+        </variable>
+        <variable type="FU" id="842709949" name="deptformation">
+          <label>
+            <fr>Dans quel département de formation êtes-vous inscrit?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="L8DTJQ">
+              <label>
+                <fr>STID</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="DTYKV9">
+              <label>
+                <fr>GEA</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="TLKDDN">
+              <label>
+                <fr>HSE</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="659888742" name="Niveau">
+          <label>
+            <fr>Quel est votre niveau de formation?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="BQAJV8">
+              <label>
+                <fr>DUT1</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="6U94FJ">
+              <label>
+                <fr>DUT2</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="QARXUU">
+              <label>
+                <fr>Licence Pro</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1142968801" name="Alt">
+          <label>
+            <fr>Si vous êtes en licence pro, êtes-vous alternant?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Niveau parmi "Licence Pro".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Niveau</v>
+              <o>PARMI</o>
+              <op>0;0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="Q3Z8QL">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="8AQJY6">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1255263262" name="Bourse">
+          <label>
+            <fr>Bénéficiez-vous d'une bourse d'enseignement supérieur?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Niveau parmi "DUT1;DUT2" Ou Alt parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Niveau</v>
+              <o>PARMI</o>
+              <op>0;1;1</op>
+            </exp>
+            <exp link="OU">
+              <v>Alt</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="RJNQ4V">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="S5ZYXL">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1732732573" name="Job">
+          <label>
+            <fr>Avez-vous un travail rémunéré régulier pendant vos études?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Niveau parmi "DUT1;DUT2" Ou Alt parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Niveau</v>
+              <o>PARMI</o>
+              <op>0;1;1</op>
+            </exp>
+            <exp link="OU">
+              <v>Alt</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="8SF425">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="EG9X8D">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1768041268" name="Logement">
+          <label>
+            <fr>Dans le cadre de vos études à Niort, vous êtes :</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>Une question "Si Autre, précisez" est associée à cette question.
+La question n'est pertinente que si Niveau parmi "DUT1;DUT2" Ou Alt parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <attributes otherprecise="1" />
+          <restrictions>
+            <exp>
+              <v>Niveau</v>
+              <o>PARMI</o>
+              <op>0;1;1</op>
+            </exp>
+            <exp link="OU">
+              <v>Alt</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="35FHRN">
+              <label>
+                <fr>Locataire</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="HVV3Z3">
+              <label>
+                <fr>Domicilié chez vos (ou un de vos) parents</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="PX4A8Y">
+              <label>
+                <fr>Autre</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="OT" id="557499314" name="Logement_Autre" cordial="0">
+          <label>
+            <fr>Si 'Autre' précisez :</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Niveau parmi "DUT1;DUT2" Ou Alt parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <text nbcharline="0" nblines="1" />
+          <restrictions>
+            <exp>
+              <v>Niveau</v>
+              <o>PARMI</o>
+              <op>0;1;1</op>
+            </exp>
+            <exp link="OU">
+              <v>Alt</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+        </variable>
+        <variable type="FU" id="413685028" name="Revenu">
+          <label>
+            <fr>Vous diriez que le niveau de revenu de votre famille est plutôt :</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Niveau parmi "DUT1;DUT2" Ou Alt parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Niveau</v>
+              <o>PARMI</o>
+              <op>0;1;1</op>
+            </exp>
+            <exp link="OU">
+              <v>Alt</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="Y7ZVQL">
+              <label>
+                <fr>Elevé</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="RBU9KA">
+              <label>
+                <fr>Moyen</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="2GPS8Y">
+              <label>
+                <fr>Faible</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="902321569" name="Budget">
+          <label>
+            <fr>Avez-vous des difficultés à gérer votre budget étudiant</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Niveau parmi "DUT1;DUT2" Ou Alt parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Niveau</v>
+              <o>PARMI</o>
+              <op>0;1;1</op>
+            </exp>
+            <exp link="OU">
+              <v>Alt</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="SHV7LA">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="96EUH2">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+      </part>
+      <part id="549767098" name="Vos_habitudes_de_vie" isexpanded="1">
+        <label>
+          <fr>Vos habitudes de vie</fr>
+        </label>
+        <shortlabel />
+        <variable type="FU" id="449006218" name="Fumeur">
+          <label>
+            <fr>Etes-vous fumeur?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="NLSPXS">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="SQ4K82">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="2076232929" name="Nbcigarettes">
+          <label>
+            <fr>Combien de cigarettes fumez-vous par jour?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Fumeur parmi "Oui".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Fumeur</v>
+              <o>PARMI</o>
+              <op>0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="2EPC52">
+              <label>
+                <fr>Moins de 5</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="C6CVDN">
+              <label>
+                <fr>Entre 5 et 10</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="4HSDDX">
+              <label>
+                <fr>Entre 10 et 20</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="FT8W9Y">
+              <label>
+                <fr>Plus de 20</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1934354439" name="Alcool">
+          <label>
+            <fr>Etes-vous consommateur d'alcool?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="34CK3U">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="A3GD3Q">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="679449711" name="Freqalcool">
+          <label>
+            <fr>Si oui, à quelle fréquence?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Alcool parmi "Oui".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Alcool</v>
+              <o>PARMI</o>
+              <op>0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="RW2TV9">
+              <label>
+                <fr>Quelques occasions dans l'année</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="RX78HW">
+              <label>
+                <fr>Moins d'une fois par semaine</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="GNFYCP">
+              <label>
+                <fr>1 ou 2 fois par semaine</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="HYPBWQ">
+              <label>
+                <fr>Plus de 2 fois par semaine</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="356791402" name="Ivre">
+          <label>
+            <fr>Si oui, au cours du mois dernier, combien de fois avez-vous été ivre?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Alcool parmi "Oui".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Alcool</v>
+              <o>PARMI</o>
+              <op>0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="7V89EK">
+              <label>
+                <fr>Aucune</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="35UQA4">
+              <label>
+                <fr>1 ou 2 fois</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="43URZS">
+              <label>
+                <fr>3 ou 4 fois</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="HHKLQ4">
+              <label>
+                <fr>Plus de 4 fois</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="2081535109" name="Sommeil">
+          <label>
+            <fr>Estimez la qualité de votre sommeil</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="VQ48TH">
+              <label>
+                <fr>Plutôt bonne</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="JZML7Q">
+              <label>
+                <fr>Moyenne</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="CUAU4S">
+              <label>
+                <fr>Plutôt mauvaise</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1138825667" name="Ecrans">
+          <label>
+            <fr>Combien de temps passez-vous chaque jour devant les écrans?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="7AJZEM">
+              <label>
+                <fr>Moins d'1 heure</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="ZKECG3">
+              <label>
+                <fr>Entre 1 et 2 heures</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="SPFTBH">
+              <label>
+                <fr>Entre 2 et 3 heures</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="AJULWV">
+              <label>
+                <fr>Plus de 3 heures</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1239090782" name="Alim">
+          <label>
+            <fr>Estimez-vous être attentif à votre alimentation?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="5R5EPE">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="SWN3PQ">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="497995333" name="Poids">
+          <label>
+            <fr>Votre poids est-il un souci pour vous?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="T6KQHJ">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="DGSU3R">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1982482875" name="Sport">
+          <label>
+            <fr>Faites-vous du sport actuellement?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="KSS3UU">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="7UMW6X">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FM" id="44829241" name="Raisonsnonsport">
+          <label>
+            <fr>Si non, pour quelle(s) raison(s)</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>Une question "Si Autre, précisez" est associée à cette question.
+Cochez au minimum 1 cases.
+La question n'est pertinente que si Sport parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <multiple minresponse="1" maxresponse="4" />
+          <attributes otherprecise="1" />
+          <restrictions>
+            <exp>
+              <v>Sport</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="NDW8FC">
+              <label>
+                <fr>Manque de temps</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="RUSM59">
+              <label>
+                <fr>Pas envie</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="TVN8TV">
+              <label>
+                <fr>Difficultés financières</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="8F28M5">
+              <label>
+                <fr>Autre</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="OT" id="2087872027" name="Raisonsnonsport_Autre" cordial="0">
+          <label>
+            <fr>Si 'Autre' précisez :</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Sport parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <text nbcharline="0" nblines="1" />
+          <restrictions>
+            <exp>
+              <v>Sport</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+        </variable>
+        <variable type="FU" id="732749073" name="Sportavant">
+          <label>
+            <fr>Si non, faisiez-vous du sport avant d'intégrer l'IUT (en dehors du sport obligatoire dans les établissements scolaires)?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Sport parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Sport</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="SU5FVC">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="EKXN7C">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+      </part>
+      <part id="1630587885" name="Vous_et_votre_sante" isexpanded="1">
+        <label>
+          <fr>Vous et votre santé</fr>
+        </label>
+        <shortlabel />
+        <variable type="FU" id="806257044" name="Recurrent">
+          <label>
+            <fr>Souffrez-vous d'un problème de santé récurrent?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="QEMNXZ">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="5PZ3QV">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1948741552" name="Suivi">
+          <label>
+            <fr>Etes-vous suivi régulièrement par un médecin?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="GL9QGU">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="LEXKFP">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1347802229" name="Automedication">
+          <label>
+            <fr>Vous arrive t-il de pratiquer l'auto-médication?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="SLLSUD">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="9PJUYQ">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1078308713" name="Secu">
+          <label>
+            <fr>A quel organisme de sécurité sociale êtes-vous affilié?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="Z2V7SS">
+              <label>
+                <fr>LMDE</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="L8YQPS">
+              <label>
+                <fr>SMECO</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="J8BJ2F">
+              <label>
+                <fr>Autre</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="UF976L">
+              <label>
+                <fr>Vous n'en savez rien</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1668438270" name="Mutuelle">
+          <label>
+            <fr>Avez-vous une mutuelle?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="PM5W3A">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="MVWSYQ">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="420707486" name="Nommutuelle">
+          <label>
+            <fr>Si oui, quelle mutuelle?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Mutuelle parmi "Oui".</fr>
+          </instruction>
+          <alert />
+          <restrictions>
+            <exp>
+              <v>Mutuelle</v>
+              <o>PARMI</o>
+              <op>0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="9PVF8G">
+              <label>
+                <fr>Votre mutuelle étudiante</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="ZC73JV">
+              <label>
+                <fr>La mutuelle de vos parents</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="WYEXD3">
+              <label>
+                <fr>Autre</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="6ZHUKL">
+              <label>
+                <fr>Vous ne la connaissez pas</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="797899319" name="Renonciation">
+          <label>
+            <fr>Vous est-il déjà arrivé de renoncer à des soins?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="UPH2G4">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="PVDHTC">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="2075154855" name="Raisonrenonciation">
+          <label>
+            <fr>Si oui, pour quelle raison principale?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>Une question "Si Autre, précisez" est associée à cette question.
+La question n'est pertinente que si Renonciation parmi "Oui".</fr>
+          </instruction>
+          <alert />
+          <attributes otherprecise="1" />
+          <restrictions>
+            <exp>
+              <v>Renonciation</v>
+              <o>PARMI</o>
+              <op>0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="MHWDB6">
+              <label>
+                <fr>Problèmes financiers</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="UY7PTH">
+              <label>
+                <fr>Problèmes pratiques</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="KYVB46">
+              <label>
+                <fr>Autre</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="OT" id="471310521" name="Raisonrenonciation_Autre" cordial="0">
+          <label>
+            <fr>Si 'Autre' précisez :</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Renonciation parmi "Oui".</fr>
+          </instruction>
+          <alert />
+          <text nbcharline="0" nblines="1" />
+          <restrictions>
+            <exp>
+              <v>Renonciation</v>
+              <o>PARMI</o>
+              <op>0;1</op>
+            </exp>
+          </restrictions>
+        </variable>
+      </part>
+      <part id="1190807373" name="Votre_avis_sur_votre_sante" isexpanded="1">
+        <label>
+          <fr>Votre avis sur votre santé</fr>
+        </label>
+        <shortlabel />
+        <variable type="FU" id="20193461" name="Satisf">
+          <label>
+            <fr>Etes-vous satisfait de votre couverture santé?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="PE69YD">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="5KYU5B">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FM" id="424503714" name="Raisonnonsatisfcouvsante">
+          <label>
+            <fr>Si non, pour quelle(s) raison(s)?</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>Une question "Si Autre, précisez" est associée à cette question.
+Cochez au minimum 1 cases.
+La question n'est pertinente que si Satisf parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <multiple minresponse="1" maxresponse="4" />
+          <attributes otherprecise="1" />
+          <restrictions>
+            <exp>
+              <v>Satisf</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+          <modalities>
+            <m id="FD7MBR">
+              <label>
+                <fr>Trop chère</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="ZN2Z7Z">
+              <label>
+                <fr>Délais de remboursement trop longs</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="L3MTZ3">
+              <label>
+                <fr>Manque d'efficacité</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="T2EKMT">
+              <label>
+                <fr>Autre</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="OT" id="2105394924" name="Raisonnonsatisfcouvsante_Autre" cordial="0">
+          <label>
+            <fr>Si 'Autre' précisez :</fr>
+          </label>
+          <shortlabel />
+          <instruction isauto="1">
+            <fr>La question n'est pertinente que si Satisf parmi "Non".</fr>
+          </instruction>
+          <alert />
+          <text nbcharline="0" nblines="1" />
+          <restrictions>
+            <exp>
+              <v>Satisf</v>
+              <o>PARMI</o>
+              <op>0;0;1</op>
+            </exp>
+          </restrictions>
+        </variable>
+        <variable type="FU" id="822857897" name="Stress">
+          <label>
+            <fr>Vous sentez-vous stressé?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="L3LL56">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="V8SS64">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="2107729986" name="Fatigue">
+          <label>
+            <fr>Estimez-vous que vous êtes fatigué?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="HRAAER">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="W8MJEN">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1686209413" name="Etatdesante">
+          <label>
+            <fr>Estimez votre état de santé actuel :</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="GWZ2TX">
+              <label>
+                <fr>Bon</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="D62NAJ">
+              <label>
+                <fr>Correct</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="ENT6E9">
+              <label>
+                <fr>Plutôt mauvais</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1618599443" name="Evolutionsante">
+          <label>
+            <fr>Vous considérez que votre état de santé depuis votre entrée dans les études supérieures :</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="G47SLH">
+              <label>
+                <fr>N'a pas changé</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="2SWXWN">
+              <label>
+                <fr>S'est détérioré</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="GCW8EH">
+              <label>
+                <fr>S'est amélioré</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="903265633" name="Influence">
+          <label>
+            <fr>Estimez-vous que votre état de santé a une influence négative sur vos résultats universitaires?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="E4N5P9">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="C5R26Z">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+        <variable type="FU" id="1752617305" name="Futur">
+          <label>
+            <fr>Votre santé future est-elle une préoccupation?</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <modalities>
+            <m id="7Z4NBL">
+              <label>
+                <fr>Oui</fr>
+              </label>
+              <shortlabel />
+            </m>
+            <m id="RYKS9B">
+              <label>
+                <fr>Non</fr>
+              </label>
+              <shortlabel />
+            </m>
+          </modalities>
+        </variable>
+      </part>
+      <part id="215892594" name="Variables systèmes" isexpanded="0">
+        <label>
+          <fr>Variables systèmes</fr>
+        </label>
+        <shortlabel />
+        <status system="1" hidden="1" />
+        <variable type="OT" id="49888923" name="Raisonrenonciation_Autre_LC" cordial="1">
+          <label>
+            <fr>Raisonrenonciation_Autre : Texte lemmatisé</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <options>
+            <var_text_id>471310521</var_text_id>
+          </options>
+          <status system="1" hidden="1" />
+        </variable>
+        <variable type="OT" id="1863271993" name="Raisonsnonsport_Autre_LC" cordial="1">
+          <label>
+            <fr>Raisonsnonsport_Autre : Texte lemmatisé</fr>
+          </label>
+          <shortlabel />
+          <alert />
+          <options>
+            <var_text_id>2087872027</var_text_id>
+          </options>
+          <status system="1" hidden="1" />
+        </variable>
+      </part>
+    </items>
+    <restrictions lastid="1687308845">
+      <restriction type="restriction" items="i1142968801" id="16131105" nosave="0">
+        <exp>
+          <v>Niveau</v>
+          <o>PARMI</o>
+          <op>0;0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i2076232929" id="1165064534" nosave="0">
+        <exp>
+          <v>Fumeur</v>
+          <o>PARMI</o>
+          <op>0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i679449711" id="1514725882" nosave="0">
+        <exp>
+          <v>Alcool</v>
+          <o>PARMI</o>
+          <op>0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i356791402" id="1687308844" nosave="0">
+        <exp>
+          <v>Alcool</v>
+          <o>PARMI</o>
+          <op>0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i44829241" id="265228841" nosave="0">
+        <exp>
+          <v>Sport</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i732749073" id="1681417152" nosave="0">
+        <exp>
+          <v>Sport</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i420707486" id="752957641" nosave="0">
+        <exp>
+          <v>Mutuelle</v>
+          <o>PARMI</o>
+          <op>0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i2075154855" id="632596651" nosave="0">
+        <exp>
+          <v>Renonciation</v>
+          <o>PARMI</o>
+          <op>0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i424503714" id="1386477313" nosave="0">
+        <exp>
+          <v>Satisf</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i1255263262" id="1660479786" nosave="0">
+        <exp>
+          <v>Niveau</v>
+          <o>PARMI</o>
+          <op>0;1;1</op>
+        </exp>
+        <exp link="OU">
+          <v>Alt</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i1732732573" id="1081136283" nosave="0">
+        <exp>
+          <v>Niveau</v>
+          <o>PARMI</o>
+          <op>0;1;1</op>
+        </exp>
+        <exp link="OU">
+          <v>Alt</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i1768041268" id="1493185382" nosave="0">
+        <exp>
+          <v>Niveau</v>
+          <o>PARMI</o>
+          <op>0;1;1</op>
+        </exp>
+        <exp link="OU">
+          <v>Alt</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i413685028" id="1065669356" nosave="0">
+        <exp>
+          <v>Niveau</v>
+          <o>PARMI</o>
+          <op>0;1;1</op>
+        </exp>
+        <exp link="OU">
+          <v>Alt</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+      <restriction type="restriction" items="i902321569" id="1624188052" nosave="0">
+        <exp>
+          <v>Niveau</v>
+          <o>PARMI</o>
+          <op>0;1;1</op>
+        </exp>
+        <exp link="OU">
+          <v>Alt</v>
+          <o>PARMI</o>
+          <op>0;0;1</op>
+        </exp>
+      </restriction>
+    </restrictions>
+    <options resetnonconcerned="0">
+      <active groups="1" jumps="1" controls="1" />
+    </options>
+  </questionnaire>
+  <modules>
+    <product company="" username="UNIVERSITE DE POITIERS" k="1" />
+    <publish>
+      <access>
+        <input rights="Open" url="" captcha="0" />
+        <consult rights="Open" url="" captcha="0" />
+        <results rights="Open" url="" captcha="0" />
+        <table rights="Open" url="" captcha="0" />
+      </access>
+    </publish>
+    <modalitiesrestriction />
+    <groupinstructions />
+    <verbatims_infos />
+    <compute_infos />
+    <qextension />
+    <samples />
+    <cs>EPN6+sWcM6/VofvUVlhX1aS3H889s5T2</cs>
+    <assembly>8.7.2</assembly>
+    <viewsauto>
+      <view model="satisf1" />
+      <view model="lex1" />
+      <view model="bilan" />
+      <view model="carac" />
+      <view model="typo" />
+      <planraw />
+    </viewsauto>
+    <docking>
+      <qeditor leftwidth="275" rightwidth="325" />
+      <table leftwidth="250" rightwidth="325" />
+      <fast leftwidth="250" />
+      <dataviv leftwidth="250" rightwidth="325" />
+    </docking>
+    <qeditor issimplelist="1" />
+    <survey_id>c85855dd-337a-4896-b7c8-737053b9f1ff</survey_id>
+    <table readonly="0">
+      <items itemsettype="0">
+        <checked>20193461;29471936;44829241;356791402;413685028;420707486;424503714;449006218;471310521;497995333;557499314;659888742;679449711;732749073;797899319;798561351;806257044;822857897;842709949;902321569;903265633;1007329886;1078308713;1138825667;1142968801;1239090782;1255263262;1347802229;1618599443;1668438270;1685211715;1686209413;1732732573;1752617305;1768041268;1934354439;1948741552;1982482875;2075154855;2076232929;2081535109;2087872027;2105394924;2107729986</checked>
+      </items>
+      <options>
+        <close>TEXT</close>
+        <multiple>MULTIPLE_ONECOLUMN</multiple>
+        <textlines>1</textlines>
+        <header>NAME</header>
+      </options>
+      <variables>
+        <variable id="1685211715">
+          <column width="70" />
+        </variable>
+        <variable id="29471936">
+          <column width="70" />
+        </variable>
+        <variable id="798561351">
+          <column width="70" />
+        </variable>
+        <variable id="1007329886">
+          <column width="280" />
+        </variable>
+        <variable id="842709949">
+          <column width="70" />
+        </variable>
+        <variable id="659888742">
+          <column width="70" />
+        </variable>
+        <variable id="1142968801">
+          <column width="70" />
+        </variable>
+        <variable id="1255263262">
+          <column width="70" />
+        </variable>
+        <variable id="1732732573">
+          <column width="70" />
+        </variable>
+        <variable id="1768041268">
+          <column width="70" />
+        </variable>
+        <variable id="557499314">
+          <column width="280" />
+        </variable>
+        <variable id="413685028">
+          <column width="70" />
+        </variable>
+        <variable id="902321569">
+          <column width="70" />
+        </variable>
+        <variable id="449006218">
+          <column width="70" />
+        </variable>
+        <variable id="2076232929">
+          <column width="70" />
+        </variable>
+        <variable id="1934354439">
+          <column width="70" />
+        </variable>
+        <variable id="679449711">
+          <column width="70" />
+        </variable>
+        <variable id="356791402">
+          <column width="70" />
+        </variable>
+        <variable id="2081535109">
+          <column width="70" />
+        </variable>
+        <variable id="1138825667">
+          <column width="70" />
+        </variable>
+        <variable id="1239090782">
+          <column width="70" />
+        </variable>
+        <variable id="497995333">
+          <column width="70" />
+        </variable>
+        <variable id="1982482875">
+          <column width="70" />
+        </variable>
+        <variable id="44829241">
+          <column width="70" />
+        </variable>
+        <variable id="2087872027">
+          <column width="280" />
+        </variable>
+        <variable id="732749073">
+          <column width="70" />
+        </variable>
+        <variable id="806257044">
+          <column width="70" />
+        </variable>
+        <variable id="1948741552">
+          <column width="70" />
+        </variable>
+        <variable id="1347802229">
+          <column width="70" />
+        </variable>
+        <variable id="1078308713">
+          <column width="70" />
+        </variable>
+        <variable id="1668438270">
+          <column width="70" />
+        </variable>
+        <variable id="420707486">
+          <column width="70" />
+        </variable>
+        <variable id="797899319">
+          <column width="70" />
+        </variable>
+        <variable id="2075154855">
+          <column width="70" />
+        </variable>
+        <variable id="471310521">
+          <column width="280" />
+        </variable>
+        <variable id="20193461">
+          <column width="70" />
+        </variable>
+        <variable id="424503714">
+          <column width="70" />
+        </variable>
+        <variable id="2105394924">
+          <column width="280" />
+        </variable>
+        <variable id="822857897">
+          <column width="70" />
+        </variable>
+        <variable id="2107729986">
+          <column width="70" />
+        </variable>
+        <variable id="1686209413">
+          <column width="70" />
+        </variable>
+        <variable id="1618599443">
+          <column width="70" />
+        </variable>
+        <variable id="903265633">
+          <column width="70" />
+        </variable>
+        <variable id="1752617305">
+          <column width="70" />
+        </variable>
+      </variables>
+      <sorts />
+      <filters />
+      <colors />
+    </table>
+    <synchronization>
+      <url />
+      <account />
+      <surveyname />
+      <lastDateSync />
+    </synchronization>
+  </modules>
+  <samples current="2">
+    <sample id="1260908948">
+      <name>filles</name>
+      <namefr>filles</namefr>
+      <exp>
+        <v>sexe</v>
+        <o>EGAL</o>
+        <op>1</op>
+      </exp>
+    </sample>
+    <sample id="440360863">
+      <name>graçons</name>
+      <namefr>graçons</namefr>
+      <exp>
+        <v>sexe</v>
+        <o>EGAL</o>
+        <op>2</op>
+      </exp>
+    </sample>
+  </samples>
+  <varsets />
+  <skins j="1" default="1258544392">
+    <skin id="1258544392" name="Default1" vertical_interline="4" horizontal_interline="4">
+      <pagemodel template="theme_backcolor_formcolor_navigation">
+        <field name="pagemodel_theme" type="IMAGE">theme__00.png</field>
+        <field name="pagemodel_background" type="COLOR">#99FFFFFF</field>
+        <field name="pagemodel_form_background" type="COLOR">#99FFFFFF</field>
+        <field name="pagemodel_form_shadow" type="BOOLEAN">False</field>
+        <field name="pagemodel_form_border" type="BOOLEAN">False</field>
+      </pagemodel>
+      <style>
+        <form>
+          <page do="1">
+            <content text="0" commentary="0" />
+            <fontlabel name="Verdana" size="10" style="NORMAL" align="LEFT" color="#FF000000" bkcolor="" />
+            <fontconsigne name="Verdana" size="10" style="NORMAL" align="LEFT" color="#FF000000" bkcolor="" />
+            <border style="NONE" size="1" color="#FFC0C0C0" />
+          </page>
+          <fvariable do="1" vrowpadding="1" graphpos="BOTTOM_TITLE" columntype="MODALITIES" locked="0" shadow="0" isrowrandom="0">
+            <content title="1" label="1" variable="0" number="0" input="1" media="0" text="0" commentarypos="BOTTOM_INPUT" />
+            <media position="LEFT" backstyle="CENTER" opacity="100" isfixedwidth="0"></media>
+            <size isfixedwidth="0" width="5.29166666666667" />
+            <fontlabel name="Verdana" size="11" style="GRAS" align="LEFT" color="#FF7F7F7F" bkcolor="" />
+            <fontinput name="Verdana" size="9" style="NORMAL" align="LEFT" color="#FF000000" bkcolor="" bkcolor2="#FFF2F2F2" />
+            <fontresponse name="Calibri" size="10" style="NORMAL" align="LEFT" color="#FF000080" bkcolor="" />
+            <fontconsigne name="Verdana" size="10" style="ITALIQUE" align="LEFT" color="#FF000000" bkcolor="" />
+            <border style="NONE" size="1" color="#FFC0C0C0" />
+            <f type="CHECKBOX" itemsnumbering="0" columnsnb="2" itemlayout="COLUMN" itemscheck="1" draganddropmode="0" itemstext="RIGHT" itemssize="0" itemszoom="0" itemsfgcolor="#FF000000" itemsbgcolor="#FFFFFFFF" itemsgrouplayout="#FF000000" usedynmodalities="1" ratingmode="STAR16" scaleblockcolor="13270825">
+              <postit colors="#FFC7D759;#FFF9E068;#FFF98D81;#FFE69ABD;#FFA8C8DC;#FFEEAC73" />
+              <checkbox color="#FF0075FF" bgcolor="" size="14" />
+              <button colors="#FFF6F6F6" padding="10" borderColor="#FFBBBBBB" borderSize="1" borderCornerRadius="5" checkColor="#FF7F7F7F" checkTextColor="#FFFFFFFF" showCheckIcon="1" />
+              <choicechips colors="#FFFFFFFF" padding="4" borderColor="#FFD9D9D9" borderSize="1" borderCornerRadius="16" checkColor="#FFE5E5E5" checkTextColor="#FF000000" showCheckIcon="0" />
+              <scaleblock colors="#FFF7F7F7" selection="Dot" selColor="#FF297FCA" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scalecolors colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Underline" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scaledynamic colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Dynamic" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scale orientation="HORIZONTAL" graduation="0" names="0" fixedsize="0" size="5" color="#FFF6F6F6" selColor="#FF9DA7A7" height="9" borderthickness="1" align="LEFT" showselectedlabel="0" />
+              <fillicon shape="star" color="#FF0143AC" size="48" />
+              <picto bordercolor="#FFA1478F" />
+            </f>
+            <s type="SCALE" itemsnumbering="0" columnsnb="5" itemlayout="COLUMN" itemscheck="1" draganddropmode="0" itemstext="TOP" itemssize="0" itemszoom="0" itemsfgcolor="#FF000000" itemsbgcolor="#FFFFFFFF" itemsgrouplayout="#FF000000" usedynmodalities="1" ratingmode="STAR16" scaleblockcolor="13270825">
+              <postit colors="#FFC7D759;#FFF9E068;#FFF98D81;#FFE69ABD;#FFA8C8DC;#FFEEAC73" />
+              <checkbox color="#FF0075FF" bgcolor="" size="14" />
+              <button colors="#FFF6F6F6" padding="10" borderColor="#FFBBBBBB" borderSize="1" borderCornerRadius="5" checkColor="#FF7F7F7F" checkTextColor="#FFFFFFFF" showCheckIcon="1" />
+              <choicechips colors="#FFFFFFFF" padding="4" borderColor="#FFD9D9D9" borderSize="1" borderCornerRadius="16" checkColor="#FFE5E5E5" checkTextColor="#FF000000" showCheckIcon="0" />
+              <scaleblock colors="#FFF7F7F7" selection="Dot" selColor="#FF297FCA" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scalecolors colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Underline" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scaledynamic colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Dynamic" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scale orientation="HORIZONTAL" graduation="1" names="1" fixedsize="0" size="5" color="#FFF6F6F6" selColor="#FF9DA7A7" height="9" borderthickness="1" align="LEFT" showselectedlabel="0" />
+              <fillicon shape="star" color="#FF0143AC" size="48" />
+              <picto bordercolor="#FFA1478F" />
+            </s>
+            <o text="BORDER" textnbline="1" focusColor="#FF297FCA" ocr="0" codelist="1" useunit="0" hidespinbuttons="0">
+              <numericslider color="#FFFAFAFA" selColor="#FF40B4AB" />
+              <d usecalendar="1" />
+            </o>
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fgroup do="1" group="1" vrowpadding="1" graphpos="BOTTOM_TITLE" columntype="MODALITIES" locked="0" shadow="0" isrowrandom="0">
+            <content title="1" label="1" variable="0" number="0" input="1" media="0" text="0" commentarypos="BOTTOM_INPUT" />
+            <media position="LEFT" backstyle="CENTER" opacity="100" isfixedwidth="0"></media>
+            <size isfixedwidth="0" width="5.29166666666667" />
+            <fontlabel name="Verdana" size="11" style="GRAS" align="LEFT" color="#FF7F7F7F" bkcolor="" />
+            <fontinput name="Verdana" size="9" style="NORMAL" align="CENTER" color="#FF000000" bkcolor="" bkcolor2="#FFF2F2F2" />
+            <fontresponse name="Calibri" size="10" style="NORMAL" align="LEFT" color="#FF000080" bkcolor="" />
+            <fontconsigne name="Verdana" size="10" style="ITALIQUE" align="LEFT" color="#FF000000" bkcolor="" />
+            <border style="NONE" size="1" color="#FFC0C0C0" />
+            <f type="CHECKBOX" itemsnumbering="0" columnsnb="2" itemlayout="COLUMN" itemscheck="1" draganddropmode="0" itemstext="RIGHT" itemssize="0" itemszoom="0" itemsfgcolor="#FF000000" itemsbgcolor="#FFFFFFFF" itemsgrouplayout="#FF000000" usedynmodalities="1" ratingmode="STAR16" scaleblockcolor="13270825">
+              <postit colors="#FFC7D759;#FFF9E068;#FFF98D81;#FFE69ABD;#FFA8C8DC;#FFEEAC73" />
+              <checkbox color="#FF0075FF" bgcolor="" size="14" />
+              <button colors="#FFF6F6F6" padding="10" borderColor="#FFBBBBBB" borderSize="1" borderCornerRadius="5" checkColor="#FF7F7F7F" checkTextColor="#FFFFFFFF" showCheckIcon="1" />
+              <choicechips colors="#FFFFFFFF" padding="4" borderColor="#FFD9D9D9" borderSize="1" borderCornerRadius="16" checkColor="#FFE5E5E5" checkTextColor="#FF000000" showCheckIcon="0" />
+              <scaleblock colors="#FFF7F7F7" selection="Dot" selColor="#FF297FCA" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scalecolors colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Underline" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scaledynamic colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Dynamic" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scale orientation="HORIZONTAL" graduation="0" names="0" fixedsize="0" size="5" color="#FFF6F6F6" selColor="#FF9DA7A7" height="9" borderthickness="1" align="LEFT" showselectedlabel="0" />
+              <fillicon shape="star" color="#FF0143AC" size="48" />
+              <picto bordercolor="#FFA1478F" />
+            </f>
+            <s type="SCALE" itemsnumbering="0" columnsnb="5" itemlayout="COLUMN" itemscheck="1" draganddropmode="0" itemstext="TOP" itemssize="0" itemszoom="0" itemsfgcolor="#FF000000" itemsbgcolor="#FFFFFFFF" itemsgrouplayout="#FF000000" usedynmodalities="1" ratingmode="STAR16" scaleblockcolor="13270825">
+              <postit colors="#FFC7D759;#FFF9E068;#FFF98D81;#FFE69ABD;#FFA8C8DC;#FFEEAC73" />
+              <checkbox color="#FF0075FF" bgcolor="" size="14" />
+              <button colors="#FFF6F6F6" padding="10" borderColor="#FFBBBBBB" borderSize="1" borderCornerRadius="5" checkColor="#FF7F7F7F" checkTextColor="#FFFFFFFF" showCheckIcon="1" />
+              <choicechips colors="#FFFFFFFF" padding="4" borderColor="#FFD9D9D9" borderSize="1" borderCornerRadius="16" checkColor="#FFE5E5E5" checkTextColor="#FF000000" showCheckIcon="0" />
+              <scaleblock colors="#FFF7F7F7" selection="Dot" selColor="#FF297FCA" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scalecolors colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Underline" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scaledynamic colors="#FFEA5950;#FFF39450;#FFFCE150;#FF92D050;#FF58AF50" selection="Dynamic" corner="20" padding="12" align="LEFT" showselectedlabel="0" />
+              <scale orientation="HORIZONTAL" graduation="1" names="1" fixedsize="0" size="5" color="#FFF6F6F6" selColor="#FF9DA7A7" height="9" borderthickness="1" align="LEFT" showselectedlabel="0" />
+              <fillicon shape="star" color="#FF0143AC" size="48" />
+              <picto bordercolor="#FFA1478F" />
+            </s>
+            <o text="BORDER" textnbline="1" focusColor="#FF297FCA" ocr="0" codelist="1" useunit="0" hidespinbuttons="0">
+              <numericslider color="#FFFAFAFA" selColor="#FF40B4AB" />
+              <d usecalendar="1" />
+            </o>
+            <placeholderoptions type="Default" />
+          </fgroup>
+          <caption do="1" linkstyle="0">
+            <font name="Verdana" size="11" style="NORMAL" align="LEFT" color="#FF000000" bkcolor="" />
+            <border style="NONE" size="1" color="#FF000000" />
+          </caption>
+          <media do="1" align="CENTER" proportional="0">
+            <border style="NONE" size="1" color="#FFC0C0C0" />
+          </media>
+          <button do="1" linkstyle="0">
+            <font name="Verdana" size="11" style="NORMAL" align="CENTER" color="#FFFFFFFF" bkcolor="#FF7F7F7F" />
+            <border style="NONE" size="1" color="#FF000000" />
+          </button>
+          <parts>
+            <part do="1">
+              <content text="1" commentary="0" />
+              <fontlabel name="Verdana" size="18" style="GRAS" align="LEFT" color="#FFFFFFFF" bkcolor="#FF093367" />
+              <fontconsigne name="Calibri" size="12" style="GRAS, ITALIQUE" align="LEFT" color="#FF3F3F3F" bkcolor="" />
+              <border style="NONE" size="2" color="#FF001C50" />
+            </part>
+            <part do="1">
+              <content text="1" commentary="0" />
+              <fontlabel name="Verdana" size="14" style="GRAS" align="LEFT" color="#FFFFFFFF" bkcolor="#FF446EA2" />
+              <fontconsigne name="Calibri" size="10" style="GRAS, ITALIQUE" align="LEFT" color="#FF3F3F3F" bkcolor="" />
+              <border style="NONE" size="1" color="#FF093367" />
+            </part>
+            <part do="1">
+              <content text="1" commentary="0" />
+              <fontlabel name="Verdana" size="12" style="GRAS" align="LEFT" color="#FF7F7F7F" bkcolor="" />
+              <fontconsigne name="Calibri" size="10" style="GRAS, ITALIQUE" align="LEFT" color="#FF3F3F3F" bkcolor="" />
+              <border style="NONE" size="6" color="#FF000000" />
+            </part>
+          </parts>
+        </form>
+      </style>
+    </skin>
+  </skins>
+  <forms j="1" current="0">
+    <form id="1404627190">
+      <name>
+        <fr>Formulaire par défaut</fr>
+      </name>
+      <pagesize width="800" height="600" typeform="WEB" papersize="SCREEN_800_PAPER" orientation="DMORIENT_PORTRAIT" />
+      <viewport left="5" top="80" right="5" bottom="42" />
+      <skin id="1258544392" />
+      <options confirmsave="0" aftersave="STOP" showtimer="0" nextauto="0" pagetransitioneffect="NONE" customnavbar="1" responsivedesign="1" dynamicfooter="0" smartphone_form_allowed="0" disablepreviousbutton="0" numerotation="NONE" sequentialmode="0" />
+      <items>
+        <progressbar id="1355183759" ismasked="1" pagenumber="1" top="564" left="300" width="200" height="30" hidden="0" template="MOD1">
+          <caption do="1" />
+        </progressbar>
+        <button id="849727793" ismasked="1" pagenumber="1" top="564" left="142" width="150" height="30" hidden="0">
+          <text textauto="1" />
+          <template category="IMAGETEXT" template="MOD1" />
+          <action action="PREV" />
+          <caption do="1" />
+        </button>
+        <button id="724074593" ismasked="1" pagenumber="1" top="564" left="508" width="150" height="30" hidden="0">
+          <text textauto="1" />
+          <template category="IMAGETEXT" template="MOD1" />
+          <action action="NEXT_FINISH" />
+          <caption do="1" />
+        </button>
+        <item id="1361786723" ismasked="0" pagenumber="1" top="80" left="5" width="790" height="39" hidden="0" itemid="1982593003">
+          <part do="1" />
+        </item>
+        <item id="165916853" ismasked="0" pagenumber="1" top="119" left="5" width="790" height="56" hidden="0" itemid="1685211715">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <f type="CHECKBOX" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="870679733" ismasked="0" pagenumber="1" top="175" left="5" width="790" height="70" hidden="0" itemid="29471936">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1691209783" ismasked="0" pagenumber="1" top="245" left="5" width="790" height="119" hidden="0" opheight="28" itemid="798561351">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="997179622" ismasked="0" pagenumber="1" top="364" left="5" width="790" height="70" hidden="0" itemid="842709949">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1799245948" ismasked="0" pagenumber="1" top="434" left="5" width="790" height="70" hidden="0" itemid="659888742">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1244334808" ismasked="0" pagenumber="2" top="80" left="5" width="790" height="78" hidden="0" itemid="1142968801">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1421132297" ismasked="0" pagenumber="2" top="158" left="5" width="790" height="78" hidden="0" itemid="1255263262">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="365383116" ismasked="0" pagenumber="2" top="236" left="5" width="790" height="78" hidden="0" itemid="1732732573">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1815405167" ismasked="0" pagenumber="2" top="314" left="5" width="790" height="136" hidden="0" opheight="28" itemid="1768041268">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <o textnbline="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1646380542" ismasked="0" pagenumber="2" top="450" left="5" width="790" height="92" hidden="0" itemid="413685028">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="731950781" ismasked="0" pagenumber="3" top="80" left="5" width="790" height="78" hidden="0" itemid="902321569">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="436552247" ismasked="0" pagenumber="3" top="158" left="5" width="790" height="39" hidden="0" itemid="549767098">
+          <part do="1" />
+        </item>
+        <item id="1025806601" ismasked="0" pagenumber="3" top="197" left="5" width="790" height="56" hidden="0" itemid="449006218">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <f type="CHECKBOX" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="65022702" ismasked="0" pagenumber="3" top="253" left="5" width="790" height="92" hidden="0" itemid="2076232929">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="689732555" ismasked="0" pagenumber="3" top="345" left="5" width="790" height="56" hidden="0" itemid="1934354439">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="690660350" ismasked="0" pagenumber="3" top="401" left="5" width="790" height="92" hidden="0" itemid="679449711">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1225673056" ismasked="0" pagenumber="4" top="80" left="5" width="790" height="92" hidden="0" itemid="356791402">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1119720606" ismasked="0" pagenumber="4" top="172" left="5" width="790" height="70" hidden="0" itemid="2081535109">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1617209887" ismasked="0" pagenumber="4" top="242" left="5" width="790" height="70" hidden="0" itemid="1138825667">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="2064654094" ismasked="0" pagenumber="4" top="312" left="5" width="790" height="56" hidden="0" itemid="1239090782">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1619456269" ismasked="0" pagenumber="4" top="368" left="5" width="790" height="56" hidden="0" itemid="497995333">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="384876323" ismasked="0" pagenumber="4" top="424" left="5" width="790" height="56" hidden="0" itemid="1982482875">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="73390390" ismasked="0" pagenumber="5" top="80" left="5" width="790" height="153" hidden="0" opheight="28" itemid="44829241">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <o textnbline="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="128248569" ismasked="0" pagenumber="5" top="233" left="5" width="790" height="96" hidden="0" itemid="732749073">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1727062505" ismasked="0" pagenumber="5" top="329" left="5" width="790" height="39" hidden="0" itemid="1630587885">
+          <part do="1" />
+        </item>
+        <item id="395325696" ismasked="0" pagenumber="5" top="368" left="5" width="790" height="56" hidden="0" itemid="806257044">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <f type="CHECKBOX" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1667709871" ismasked="0" pagenumber="5" top="424" left="5" width="790" height="56" hidden="0" itemid="1948741552">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="335825149" ismasked="0" pagenumber="5" top="480" left="5" width="790" height="56" hidden="0" itemid="1347802229">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1135955456" ismasked="0" pagenumber="6" top="80" left="5" width="790" height="70" hidden="0" itemid="1078308713">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="56893626" ismasked="0" pagenumber="6" top="150" left="5" width="790" height="56" hidden="0" itemid="1668438270">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1394114299" ismasked="0" pagenumber="6" top="206" left="5" width="790" height="92" hidden="0" itemid="420707486">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1939476849" ismasked="0" pagenumber="6" top="298" left="5" width="790" height="56" hidden="0" itemid="797899319">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1544993992" ismasked="0" pagenumber="6" top="354" left="5" width="790" height="136" hidden="0" opheight="28" itemid="2075154855">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <o textnbline="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1691356606" ismasked="0" pagenumber="6" top="490" left="5" width="790" height="39" hidden="0" itemid="1190807373">
+          <part do="1" />
+        </item>
+        <item id="1091674144" ismasked="0" pagenumber="7" top="80" left="5" width="790" height="56" hidden="0" itemid="20193461">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <f type="CHECKBOX" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="931274777" ismasked="0" pagenumber="7" top="136" left="5" width="790" height="153" hidden="0" opheight="28" itemid="424503714">
+          <fvariable do="1" locked="0">
+            <content title="1" text="1" />
+            <o textnbline="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1742568818" ismasked="0" pagenumber="7" top="289" left="5" width="790" height="56" hidden="0" itemid="822857897">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1490590531" ismasked="0" pagenumber="7" top="345" left="5" width="790" height="56" hidden="0" itemid="2107729986">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="1318462701" ismasked="0" pagenumber="7" top="401" left="5" width="790" height="70" hidden="0" itemid="1686209413">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="269407658" ismasked="0" pagenumber="7" top="471" left="5" width="790" height="70" hidden="0" itemid="1618599443">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="986345381" ismasked="0" pagenumber="8" top="80" left="5" width="790" height="74" hidden="0" itemid="903265633">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+        <item id="314044605" ismasked="0" pagenumber="8" top="154" left="5" width="790" height="56" hidden="0" itemid="1752617305">
+          <fvariable do="1" locked="0">
+            <content title="1" />
+            <placeholderoptions type="Default" />
+          </fvariable>
+          <fvariable sphdo="1" modnocontrols="0" documentsnodel="0" />
+        </item>
+      </items>
+      <pages>
+        <page id="1703439949">
+          <description />
+        </page>
+        <page id="32871336">
+          <description />
+        </page>
+        <page id="911713808">
+          <description />
+        </page>
+        <page id="149363928">
+          <description />
+        </page>
+        <page id="1895658581">
+          <description />
+        </page>
+        <page id="2014322611">
+          <description />
+        </page>
+        <page id="1993966059">
+          <description />
+        </page>
+        <page id="1509523524">
+          <description />
+        </page>
+      </pages>
+      <scanner />
+    </form>
+  </forms>
+  <boards j="1" />
+  <notes lastid="1" />
+  <eureka version="5.1.0.4">
+    <data />
+    <parameters />
+    <id>MP8AQHJBM4Z7BWDH</id>
+    <compatible>3</compatible>
+    <decimals>2 1 0 0</decimals>
+    <statistics>
+      <thresholds-ff>5 1 5 15</thresholds-ff>
+      <thresholds-fn>5 1 5 15</thresholds-fn>
+      <thresholds-nn>0.6 0.8 0.6 0.4</thresholds-nn>
+      <strict-calculations>0 30 20</strict-calculations>
+      <principle-elements>0 10 0 3</principle-elements>
+      <significant-cells>60 95</significant-cells>
+    </statistics>
+    <publish>
+      <url />
+      <study />
+      <forbidden system="1">access;autosave;calculate;clone;consult;createshortcut;consultkey;debug;deleterecord;deleterecords;download;editlegend;execute;exist;exist2;flush;gettranslations;home;input;lock;makepdf;modify;page;pageget;pagepost;panel;quotas;recalculate;recorder;report;reports;save;saveget;savepost;settranslations;table;unlock</forbidden>
+      <autopages>1</autopages>
+      <access>-1</access>
+      <login0 captcha="0"></login0>
+      <login1 captcha="0"></login1>
+      <login2 captcha="0"></login2>
+      <login3 captcha="0"></login3>
+      <cryptonly>2</cryptonly>
+    </publish>
+    <reports>
+      <report select="1">
+        <name>Rapport n°1</name>
+        <view>Dépouillement automatique</view>
+        <view>tb annie</view>
+        <samples>1</samples>
+      </report>
+    </reports>
+    <views>
+      <view id="sph_raw_40045" type="tables">
+        <grid>0</grid>
+        <namefr>Dépouillement automatique</namefr>
+        <name>Dépouillement automatique</name>
+        <rect x="69" y="69" w="3220" h="1220" />
+        <style>Rapport 'papier'</style>
+        <commentary>^w</commentary>
+        <size paper="68" width="2540" height="1905" orientation="1" antialiasing="1" header="0" trailer="0" />
+        <margins x="69" y="26" w="0" h="0" />
+        <zoom>-2 50</zoom>
+        <background mode="1" color="FFFFFF" />
+        <toolbar>1</toolbar>
+        <progress>1</progress>
+        <placement>3 2 20 50 3 1 1</placement>
+        <organise>0 3 50 50 0</organise>
+        <autoformat>0 0 1 1 2 1 1 1</autoformat>
+        <shape style="1">
+          <selected style="1" size="1" color="FF0000" />
+          <border style="0" size="2" color="3BD557" />
+          <background color="" />
+        </shape>
+        <caption style="1">
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <font name="Arial" size="10" style="0" align="0" color="000000" bkcolor="" />
+          <border style="0" size="1" color="000000" />
+          <linkstyle>0</linkstyle>
+        </caption>
+        <title style="1">
+          <content text="1" commentary="0" />
+          <font1 name="Arial" size="14" style="1" align="0" color="FFFFFF" bkcolor="CCAF00" />
+          <font2 name="Arial" size="10" style="2" align="0" color="000000" bkcolor="" />
+          <border style="0" size="1" color="000000" />
+        </title>
+        <variable style="1">
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <font1 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="12" style="1" align="0" color="CCAF00" bkcolor="" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="9" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="000000" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <comparison>0 0</comparison>
+            <test>0 0</test>
+            <options>1 0 1 1</options>
+            <display>1 0 0 0 1 1 -1</display>
+            <risk>85</risk>
+            <style id="style2" color1="3921239" color2="16777215" color3="16777215" color4="-1" color5="-1" />
+          </table>
+          <graph f="bar0" n="col1">
+            <limits fix="0" min="0" max="100" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <medias>enfant.png</medias>
+            <colors mode="6" palette="7" />
+            <options frame="1" style="0" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 20 0 0 0</records>
+              <variables>1 10 0 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 0 1</options>
+            </map>
+            <height h="0" fix="0" />
+            <width w="1000" fix="0" />
+            <f>3 0 1 1 0</f>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <graphpos>0</graphpos>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="0" text="0" text2="0" table="1" graph="1" values="1" />
+          <values>1 0 0 0 1 1 1 1 0 0 0 25 75 0 0</values>
+        </variable>
+        <node style="1">
+          <rules>
+            <options>1 0 1 0 0</options>
+            <on>0 0 6 3 100 4 0</on>
+            <ot>0 0 0</ot>
+            <oc>0 0 0</oc>
+            <od>1 2</od>
+            <simplify>0 0 0 0 0 0</simplify>
+          </rules>
+          <values>0 1 0 0 1 1 0 0 0 0 0 25 75 1 1 1 0 0</values>
+          <item>0 </item>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats></formats>
+          <font1 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="8" style="1" align="1" color="000000" bkcolor="3BD557" />
+          <font3 name="Arial" size="8" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="8" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="1" size="1" color="000000" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <comparison>0 0</comparison>
+            <options>0 0 0 0</options>
+            <display>1 1 0 0 1 0 -1</display>
+            <risk>85</risk>
+          </table>
+          <graph f="boxplot0" n="boxplot0">
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <colors mode="0" />
+            <options frame="1" style="1" gradings="0" grid="0" filled="0" linewidth="1" />
+            <height h="0" fix="0" />
+            <width w="300" fix="0" />
+            <f>10 0 1 1 0</f>
+            <n>10 1 1 0 1</n>
+          </graph>
+          <graphpos>1</graphpos>
+          <content name="0" label="0" variable="0" number="0" text="0" text2="0" table="0" graph="0" values="1" />
+        </node>
+        <group style="1">
+          <values>1 1</values>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <font1 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="9" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="000000" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <total>0 0</total>
+            <tests>
+              <ff>0 85 0 0</ff>
+              <fn>0 85 0 0</fn>
+              <nn>0 0</nn>
+            </tests>
+            <style id="style3" color1="3921239" color2="16777215" color3="16056309" color4="-1" color5="-1" />
+            <ff>1 0 0 0 1 -1 False</ff>
+            <fn>1 1 0 0 0 0 0 0 1 0 0 0</fn>
+            <nn>1 1 0 0 0 0 0 0 0 0</nn>
+          </table>
+          <graph model="bar0;bar0;bar0">
+            <models ff="bar0;bar0;bar0" fn="bar0;bar0;bar0" nn="bar0;bar0;bar0" />
+            <type>13</type>
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="1" />
+            <xgraph />
+            <transpose>0</transpose>
+            <colors mode="6" palette="7" />
+            <options frame="1" style="0" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 10 0 0 0</records>
+              <variables>1 20 1 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 0 1</options>
+            </map>
+            <height h="0" fix="0" />
+            <width w="0" fix="0" />
+            <ff>1 0 1 1 1</ff>
+            <fn>1 1 1 1</fn>
+            <nn>1 1 1 0 0</nn>
+          </graph>
+          <graphpos>1</graphpos>
+          <content name="1" variables="0" labels="2" text="0" text2="0" table="1" graph="1" values="1" />
+        </group>
+        <compound style="1">
+          <uncalc>1</uncalc>
+          <values>0</values>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats></formats>
+          <font1 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="12" style="1" align="0" color="CCAF00" bkcolor="" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="8" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="3BD557" />
+          <table>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <options>0 0</options>
+          </table>
+          <graph model="mapping0">
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <xgraph />
+            <transpose>0</transpose>
+            <display>10 1 1 0 1</display>
+            <colors mode="6" palette="7" />
+            <options frame="1" style="1" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 20 0 0 0</records>
+              <variables>1 10 0 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 1 1</options>
+            </map>
+            <height h="300" fix="0" />
+            <width w="300" fix="0" />
+          </graph>
+          <graphpos>1</graphpos>
+          <content text2="0" text="0" name="1" table="1" graph="1" values="0" />
+        </compound>
+        <characteristics style="1">
+          <rule>
+            <options>1 0 1 0 0</options>
+            <on>0 0 6 3 100 4 0</on>
+            <ot>0 0 0</ot>
+            <oc>0 0 0</oc>
+            <od>0 1</od>
+            <simplify>8 0 0 0 0 255</simplify>
+          </rule>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats></formats>
+          <font1 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="12" style="1" align="0" color="CCAF00" bkcolor="FFFFFF" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="9" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="3BD557" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth>4;4;4;4;4;4;4;4;4;</columnswidth>
+            <truncate>15</truncate>
+            <criteria>0 0 0 0</criteria>
+            <ff>1 0 0</ff>
+            <fn>1 0</fn>
+            <fe>1 1 1 0 0</fe>
+            <positives>
+              <items />
+            </positives>
+            <negatives>
+              <items />
+            </negatives>
+            <deviation></deviation>
+            <total></total>
+            <options>1 5 0 1 1 0 1</options>
+            <cells>1 0 0 1 0</cells>
+          </table>
+          <graph>
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <xgraph />
+            <display>0 0 1</display>
+            <colors mode="6" palette="1" />
+            <options frame="1" style="1" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 20 0 0 0</records>
+              <variables>1 10 0 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 0 1</options>
+            </map>
+            <height h="300" fix="0" />
+            <width w="300" fix="0" />
+          </graph>
+          <graphpos>1</graphpos>
+          <content name="1" variables="1" labels="1" text="0" text2="0" table="1" graph="0" values="1" />
+        </characteristics>
+        <relation style="1">
+          <line style="0" size="0" color="000000" />
+          <values>0 0 0 3 0</values>
+          <font name="Arial" size="8" style="0" align="1" color="000000" bkcolor="FFFFFF" />
+          <border style="4" size="0" color="000000" />
+        </relation>
+        <question style="1">
+          <pictos />
+          <fsize>0 0 0</fsize>
+          <random_variables></random_variables>
+          <content title="1" label="1" variable="0" number="0" input="1" media="0" text="1" />
+          <size>0 500 0 500 0 0 100</size>
+          <font1 name="Arial" size="8" style="2" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="8" style="1" align="0" color="000000" bkcolor="FFFFFF" />
+          <font3 name="Arial" size="8" style="0" align="2" color="000000" bkcolor="FFFFFF" bkcolor2="FFFFFF" />
+          <font4 name="Arial" size="8" style="0" align="0" color="FF0000" />
+          <border style="3" size="1" color="000000" />
+          <graphpos>0</graphpos>
+          <f>0 0 1 0 1 2 0 0 16777215 0 0</f>
+          <slider>0 1 0 0 500</slider>
+          <o>2 0 1 0 0</o>
+          <d>1</d>
+          <options>0 0 0</options>
+        </question>
+        <media style="1">
+          <border style="0" size="1" color="000000" />
+        </media>
+        <extern style="1">
+          <content image="1" output="0" title="0" />
+          <font name="Arial" size="8" style="0" align="0" color="000000" bkcolor="" />
+          <border style="0" size="1" color="000000" />
+        </extern>
+        <object style="1">
+          <border style="1" size="1" color="000000" />
+        </object>
+        <caption id="6DBSCUPKCM6D">
+          <rect x="77" y="61" w="2418" h="61" />
+          <textfr>[Titre de l'étude]</textfr>
+          <mask>1</mask>
+          <font name="Arial" size="11" style="1" align="1" color="CCAF00" bkcolor="" />
+        </caption>
+        <caption id="0JDZCUPKC9TM">
+          <rect x="77" y="61" w="2387" h="58" />
+          <textfr>[Population étudiée]</textfr>
+          <mask>1</mask>
+          <font name="Arial" size="10" style="0" align="2" color="000000" bkcolor="" />
+        </caption>
+        <caption id="CT46DUPKCVO2">
+          <rect x="77" y="108" w="2387" h="56" />
+          <textfr>Nombre d'observations :[Nombre d'observations]</textfr>
+          <mask>1</mask>
+          <font name="Arial" size="9" style="0" align="2" color="000000" bkcolor="" />
+        </caption>
+        <caption id="0G0DDUPKCLTM">
+          <rect x="77" y="103" w="2387" h="58" />
+          <textfr>[Page] / [Nombre de pages]</textfr>
+          <mask>1</mask>
+          <font name="Arial" size="10" style="0" align="1" color="000000" bkcolor="" />
+        </caption>
+        <variable id="3DWJDUPKC26B">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="188" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>sexe</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="VKBTGUPKCX02">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="188" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Age</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="H3T7JUPKCVRJ">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="188" w="783" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Deptgeo</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="UKYNNUPKCDC4">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="1019" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>deptformation</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="B061QUPKCWMO">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="1019" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Niveau</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="BVGCSUPKC7MJ">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="1019" w="783" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Alt</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="TOVOUUPKC80M">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="2093" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Bourse</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="9P60XUPKCQB5">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="2093" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Job</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="RO8DZUPKCMJB">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="2093" w="783" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Logement</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="611S1VPKCF3">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="2916" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Revenu</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="C7D54VPKC8ZI">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="2924" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Budget</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="UOZO6VPKCTV2">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="2924" w="783" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Fumeur</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="4MJ09VPKCD8A">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="3998" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Nbcigarettes</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="5S9DBVPKC7V7">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="3998" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Alcool</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="P1QPDVPKCH3P">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="3998" w="783" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Freqalcool</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="YAQ1GVPKC4Z">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="4829" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Ivre</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="00PEIVPKCGD6">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="4829" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Sommeil</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="3TDSKVPKCAS4">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="4829" w="783" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Ecrans</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="LAV6NVPKCG96">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="5903" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Alim</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="EQ6LPVPKCQV3">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="5903" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Poids</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="6AS1SVPKCMOF">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="5903" w="783" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Sport</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="1FSEUVPKCVDM">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="6734" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Raisonsnonsport</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="S6WRWVPKCRQN">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="6734" w="781" h="807" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Sportavant</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="VMZ3ZVPKC3Y4">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="6734" w="783" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Recurrent</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="SNYE1WPKCNPJ">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="7808" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Suivi</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="6EOW3WPKCLBG">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="7808" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Automedication</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="1C886WPKCSLG">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="7808" w="783" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Secu</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="XODK8WPKCIZM">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="8639" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Mutuelle</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="X68WAWPKCKIB">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="8639" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Nommutuelle</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="X0J7DWPKCKAN">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="8639" w="783" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Renonciation</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="NVCKFWPKCJSG">
+          <select>1</select>
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="9713" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 1 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Raisonrenonciation</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="QKMVHWPKC8T3">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="894" y="9713" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Satisf</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="0YW7KWPKC73G">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="9713" w="783" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="bar2" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 1 1 0 0</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Right"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Raisonnonsatisfcouvsante</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="O7YOMWPKCEEE">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="10544" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Stress</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="4RU0PWPKC5OA">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="10544" w="781" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Fatigue</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="JGBIRWPKCCUN">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1680" y="10544" w="783" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Etatdesante</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="T6FUTWPKC1OD">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="77" y="11618" w="781" h="767" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Evolutionsante</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="Z7KAWWPKCMME">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="892" y="11618" w="781" h="807" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Influence</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+        <variable id="VQPLYWPKCAKD">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1611" y="11591" w="783" h="728" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <border style="2" size="1" color="3BD55D" />
+          <graph f="pie1" n="col1">
+            <colors mode="6" palette="a" />
+            <height h="600" fix="1" />
+            <width w="700" fix="1" />
+            <f>13 0 1 0 1</f>
+            <xgraph><![CDATA[<options><legends show="False" position="Bottom"/></options>]]></xgraph>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Futur</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="1" text="0" text2="0" table="0" graph="1" values="1" />
+        </variable>
+      </view>
+      <view id="S79SYTZVF1AF" select="1" type="tables">
+        <grid>0</grid>
+        <namefr>tb annie</namefr>
+        <name>tb annie</name>
+        <style>Rapport 'papier'</style>
+        <size paper="68" width="2100" height="2970" orientation="1" antialiasing="1" header="0" trailer="0" />
+        <margins x="265" y="265" w="0" h="0" />
+        <zoom>-2 50</zoom>
+        <background mode="1" color="FFFFFF" />
+        <toolbar>1</toolbar>
+        <progress>1</progress>
+        <placement>3 2 20 50 3 1 1</placement>
+        <organise>0 3 50 50 0</organise>
+        <autoformat>0 0 1 1 2 1 1 1</autoformat>
+        <shape style="1">
+          <selected style="1" size="1" color="FF0000" />
+          <border style="0" size="2" color="3BD557" />
+          <background color="" />
+        </shape>
+        <caption style="1">
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <font name="Arial" size="10" style="0" align="0" color="000000" bkcolor="" />
+          <border style="0" size="1" color="000000" />
+          <linkstyle>0</linkstyle>
+        </caption>
+        <title style="1">
+          <content text="1" commentary="0" />
+          <font1 name="Arial" size="14" style="1" align="0" color="FFFFFF" bkcolor="CCAF00" />
+          <font2 name="Arial" size="10" style="2" align="0" color="000000" bkcolor="" />
+          <border style="0" size="1" color="000000" />
+        </title>
+        <variable style="1">
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <font1 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="12" style="1" align="0" color="CCAF00" bkcolor="" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="9" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="000000" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <comparison>0 0</comparison>
+            <test>0 0</test>
+            <options>1 0 1 1</options>
+            <display>1 0 0 0 1 1 -1</display>
+            <risk>85</risk>
+            <style id="style2" color1="3921239" color2="16777215" color3="16777215" color4="-1" color5="-1" />
+          </table>
+          <graph f="bar0" n="col1">
+            <limits fix="0" min="0" max="100" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <medias>enfant.png</medias>
+            <colors mode="6" palette="7" />
+            <options frame="1" style="0" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 20 0 0 0</records>
+              <variables>1 10 0 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 0 1</options>
+            </map>
+            <height h="0" fix="0" />
+            <width w="1000" fix="0" />
+            <f>3 0 1 1 0</f>
+            <n>13 1 1 1 1</n>
+          </graph>
+          <graphpos>0</graphpos>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <content name="1" label="1" variable="0" number="0" text="0" text2="0" table="1" graph="1" values="1" />
+          <values>1 0 0 0 1 1 1 1 0 0 0 25 75 0 0</values>
+        </variable>
+        <node style="1">
+          <rules>
+            <options>1 0 1 0 0</options>
+            <on>0 0 6 3 100 4 0</on>
+            <ot>0 0 0</ot>
+            <oc>0 0 0</oc>
+            <od>1 2</od>
+            <simplify>0 0 0 0 0 0</simplify>
+          </rules>
+          <values>0 1 0 0 1 1 0 0 0 0 0 25 75 1 1 1 0 0</values>
+          <item>0 </item>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats></formats>
+          <font1 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="8" style="1" align="1" color="000000" bkcolor="3BD557" />
+          <font3 name="Arial" size="8" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="8" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="1" size="1" color="000000" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <comparison>0 0</comparison>
+            <options>0 0 0 0</options>
+            <display>1 1 0 0 1 0 -1</display>
+            <risk>85</risk>
+          </table>
+          <graph f="boxplot0" n="boxplot0">
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <colors mode="0" />
+            <options frame="1" style="1" gradings="0" grid="0" filled="0" linewidth="1" />
+            <height h="0" fix="0" />
+            <width w="300" fix="0" />
+            <f>10 0 1 1 0</f>
+            <n>10 1 1 0 1</n>
+          </graph>
+          <graphpos>1</graphpos>
+          <content name="0" label="0" variable="0" number="0" text="0" text2="0" table="0" graph="0" values="1" />
+        </node>
+        <group style="1">
+          <values>1 1</values>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <font1 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="9" style="1" align="0" color="CCAF00" bkcolor="" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="9" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="000000" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <total>0 0</total>
+            <tests>
+              <ff>0 85 0 0</ff>
+              <fn>0 85 0 0</fn>
+              <nn>0 0</nn>
+            </tests>
+            <style id="style3" color1="3921239" color2="16777215" color3="16056309" color4="-1" color5="-1" />
+            <ff>1 0 0 0 1 -1 False</ff>
+            <fn>1 1 0 0 0 0 0 0 1 0 0 0</fn>
+            <nn>1 1 0 0 0 0 0 0 0 0</nn>
+          </table>
+          <graph model="bar0">
+            <models ff="bar0" fn="bar0" nn="bar0" />
+            <type>3</type>
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="1" />
+            <xgraph />
+            <transpose>0</transpose>
+            <colors mode="6" palette="7" />
+            <options frame="1" style="0" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 10 0 0 0</records>
+              <variables>1 20 1 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 0 1</options>
+            </map>
+            <height h="0" fix="0" />
+            <width w="0" fix="0" />
+            <ff>1 0 1 1 1</ff>
+            <fn>1 1 1 1</fn>
+            <nn>1 1 1 0 0</nn>
+          </graph>
+          <graphpos>1</graphpos>
+          <content name="1" variables="0" labels="2" text="0" text2="0" table="1" graph="1" values="1" />
+        </group>
+        <compound style="1">
+          <uncalc>1</uncalc>
+          <values>0</values>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats></formats>
+          <font1 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="12" style="1" align="0" color="CCAF00" bkcolor="" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="8" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="8" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="3BD557" />
+          <table>
+            <columnswidth></columnswidth>
+            <truncate>0</truncate>
+            <options>0 0</options>
+          </table>
+          <graph model="mapping0">
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <xgraph />
+            <transpose>0</transpose>
+            <display>10 1 1 0 1</display>
+            <colors mode="6" palette="7" />
+            <options frame="1" style="1" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 20 0 0 0</records>
+              <variables>1 10 0 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 1 1</options>
+            </map>
+            <height h="300" fix="0" />
+            <width w="300" fix="0" />
+          </graph>
+          <graphpos>1</graphpos>
+          <content text2="0" text="0" name="1" table="1" graph="1" values="0" />
+        </compound>
+        <characteristics style="1">
+          <rule>
+            <options>1 0 1 0 0</options>
+            <on>0 0 6 3 100 4 0</on>
+            <ot>0 0 0</ot>
+            <oc>0 0 0</oc>
+            <od>0 1</od>
+            <simplify>8 0 0 0 0 255</simplify>
+          </rule>
+          <decimals>-1 -1 -1 -1</decimals>
+          <numbers />
+          <formats></formats>
+          <font1 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="12" style="1" align="0" color="CCAF00" bkcolor="FFFFFF" />
+          <font3 name="Arial" size="9" style="0" align="2" color="000000" bkcolor="FFFFFF" />
+          <font4 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <font5 name="Arial" size="9" style="0" color="000000" bkcolor="FFFFFF" />
+          <font6 name="Arial" size="9" style="0" align="0" color="000000" bkcolor="FFFFFF" />
+          <border style="0" size="1" color="3BD557" />
+          <table>
+            <items>1 0 0</items>
+            <columnswidth>4;4;4;4;4;4;4;4;4;</columnswidth>
+            <truncate>15</truncate>
+            <criteria>0 0 0 0</criteria>
+            <ff>1 0 0</ff>
+            <fn>1 0</fn>
+            <fe>1 1 1 0 0</fe>
+            <positives>
+              <items />
+            </positives>
+            <negatives>
+              <items />
+            </negatives>
+            <deviation></deviation>
+            <total></total>
+            <options>1 5 0 1 1 0 1</options>
+            <cells>1 0 0 1 0</cells>
+          </table>
+          <graph>
+            <limits fix="0" min="0" max="0" />
+            <target enable="0" value="0" color="0" />
+            <dual mode="0" />
+            <curve joinnan="0" />
+            <xgraph />
+            <display>0 0 1</display>
+            <colors mode="6" palette="1" />
+            <options frame="1" style="1" gradings="0" grid="0" filled="0" linewidth="1" />
+            <map>
+              <axis>0 1 0</axis>
+              <items1>3 50 0 1 0 1 0 0</items1>
+              <items2>3 50 0 1 0 1 0 0</items2>
+              <records>2 20 0 0 0</records>
+              <variables>1 10 0 0 0</variables>
+              <options>0 1 1 1 1 0 0 1 1 0 1</options>
+            </map>
+            <height h="300" fix="0" />
+            <width w="300" fix="0" />
+          </graph>
+          <graphpos>1</graphpos>
+          <content name="1" variables="1" labels="1" text="0" text2="0" table="1" graph="0" values="1" />
+        </characteristics>
+        <relation style="1">
+          <line style="0" size="0" color="000000" />
+          <values>0 0 0 3 0</values>
+          <font name="Arial" size="8" style="0" align="1" color="000000" bkcolor="FFFFFF" />
+          <border style="4" size="0" color="000000" />
+        </relation>
+        <question style="1">
+          <pictos />
+          <fsize>0 0 0</fsize>
+          <random_variables></random_variables>
+          <content title="1" label="1" variable="0" number="0" input="1" media="0" text="1" />
+          <size>0 500 0 500 0 0 100</size>
+          <font1 name="Arial" size="8" style="2" align="0" color="000000" bkcolor="FFFFFF" />
+          <font2 name="Arial" size="8" style="1" align="0" color="000000" bkcolor="FFFFFF" />
+          <font3 name="Arial" size="8" style="0" align="2" color="000000" bkcolor="FFFFFF" bkcolor2="FFFFFF" />
+          <font4 name="Arial" size="8" style="0" align="0" color="FF0000" />
+          <border style="3" size="1" color="000000" />
+          <graphpos>0</graphpos>
+          <f>0 0 1 0 1 2 0 0 16777215 0 0</f>
+          <slider>0 1 0 0 500</slider>
+          <o>2 0 1 0 0</o>
+          <d>1</d>
+          <options>0 0 0</options>
+        </question>
+        <media style="1">
+          <border style="0" size="1" color="000000" />
+        </media>
+        <extern style="1">
+          <content image="1" output="0" title="0" />
+          <font name="Arial" size="8" style="0" align="0" color="000000" bkcolor="" />
+          <border style="0" size="1" color="000000" />
+        </extern>
+        <object style="1">
+          <border style="1" size="1" color="000000" />
+        </object>
+        <group id="I7WE297XFTA9">
+          <values>0 0</values>
+          <formats></formats>
+          <rect x="177" y="1236" w="815" h="815" />
+          <table>
+            <total>1 0</total>
+            <ff>1 0 0 0 1 -1 False</ff>
+          </table>
+          <graph model="stcol2">
+            <models ff="stcol2" fn="bar0" nn="bar0" />
+            <type>13</type>
+            <colors mode="5" color="000015" color2="000014" continuous="0" />
+            <height h="800" fix="1" />
+            <width w="800" fix="1" />
+            <ff>1 1 0 1 1</ff>
+            <fn>1 1 1 1</fn>
+            <nn>1 1 1 0 0</nn>
+          </graph>
+          <content name="0" variables="0" labels="2" text="0" text2="0" table="0" graph="1" values="1" />
+          <variable>sexe</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>deptformation</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+        <variable id="SN9RJKW5HU45">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="164" y="1966" w="855" h="855" />
+          <graph f="pie4" n="col1">
+            <colors mode="5" color="00001B" color2="00002A" continuous="0" />
+            <f>13 0 1 1 1</f>
+            <xgraph />
+            <n>13 1 1 1 1</n>
+          </graph>
+          <variable>Nbcigarettes</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+            <items>Plus de 10=3=4;Moins de 10=1=2</items>
+          </rules>
+          <content name="0" label="1" variable="0" number="0" text="0" text2="0" table="0" graph="1" values="1" />
+          <values>0 0 0 0 1 1 1 1 0 0 0 25 75 0 0</values>
+        </variable>
+        <caption id="GZ9GA6LDH53B">
+          <rect x="191" y="2058" w="826" h="101" />
+          <textfr>Répartition des fumeurs selon le nombre de cigarettes quotidiennes^p</textfr>
+        </caption>
+        <variable id="SDZJP0LGHWDH">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="302" y="151" w="593" h="460" />
+          <variable>Niveau</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </variable>
+        <variable id="A6T3LR5HHBA2">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1246" y="193" w="616" h="619" />
+          <variable>Ivre</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </variable>
+        <variable id="A8EUGSZHHF02">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="220" y="667" w="900" h="524" />
+          <variable>Freqalcool</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </variable>
+        <group id="IA48FYGMHBP">
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <rect x="1249" y="857" w="527" h="651" />
+          <table>
+            <ff>1 0 0 0 1 -1 False</ff>
+          </table>
+          <variable>sexe</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>Sportavant</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+        <group id="I9HLMQU7ILGL">
+          <values>0 0</values>
+          <formats></formats>
+          <rect x="193" y="3233" w="839" h="870" />
+          <namefr>Le souci du poids augmente avec l'âge</namefr>
+          <table>
+            <ff>1 0 0 0 1 -1 False</ff>
+          </table>
+          <graph model="stcol2">
+            <models ff="stcol2" fn="bar0" nn="bar0" />
+            <type>13</type>
+            <colors mode="5" color="00001C" color2="000012" continuous="0" />
+            <height h="800" fix="1" />
+            <width w="600" fix="1" />
+            <ff>1 1 1 1 1</ff>
+            <fn>1 1 1 1</fn>
+            <nn>1 1 1 0 0</nn>
+          </graph>
+          <content name="1" variables="0" labels="2" text="0" text2="0" table="0" graph="1" values="1" />
+          <variable>Poids</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>Age</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 -1</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+            <items>Plus de 22 ans=3=4;Moins de 22 ans=1=2</items>
+          </rules>
+        </group>
+        <variable id="09KW2TP8IEIM">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="1262" y="3339" w="609" h="460" />
+          <variable>Poids</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </variable>
+        <group id="0I6U12TYI9WF">
+          <values>0 0</values>
+          <formats></formats>
+          <rect x="238" y="4165" w="1601" h="452" />
+          <namefr>La renonciation aux soins selon le statut boursier ou non</namefr>
+          <table>
+            <total>1 0</total>
+            <ff>1 2 0 1 1 -1 False</ff>
+          </table>
+          <graph model="bar0">
+            <xgraph><![CDATA[<options><legends position="Right"/><areas dispo="Line"/><area piepyr_labelstyle="0" barcol_labelstyle="0" /><scalebreakstyle enabled="False" color="" /></options>]]></xgraph>
+            <type>3</type>
+            <models ff="bar0" />
+            <colors mode="6" palette="f" />
+            <height h="800" fix="1" />
+            <width w="600" fix="1" />
+            <ff>1 1 1 1 1</ff>
+          </graph>
+          <content name="1" variables="0" labels="2" text="0" text2="0" table="1" graph="0" values="1" />
+          <variable>Bourse</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>Renonciation</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+        <variable id="H3NBRYYT41FI">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="312" y="6138" w="807" h="468" />
+          <variable>Nommutuelle</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </variable>
+        <caption id="8Y08I7JGELNM">
+          <rect x="151" y="1188" w="603" h="101" />
+          <textfr>&lt;p align="center"&gt;Répartition des étudiants selon le département de formation et le sexe&lt;/p&gt;</textfr>
+        </caption>
+        <group id="1RTUPFOT18Y9">
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <rect x="1035" y="1553" w="775" h="1204" />
+          <table>
+            <ff>1 0 0 0 1 -1 False</ff>
+          </table>
+          <graph model="stcol2">
+            <models ff="stcol2" fn="bar0" nn="bar0" />
+            <type>13</type>
+            <colors mode="6" palette="a" />
+            <ff>1 1 1 1 1</ff>
+            <fn>1 1 1 1</fn>
+            <nn>1 1 1 0 0</nn>
+          </graph>
+          <variable>Bourse</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>Etatdesante</variable>
+          <rules>
+            <options>1 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+        <group id="0MWGOGNIEPUM">
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <rect x="151" y="4662" w="781" h="778" />
+          <table>
+            <ff>1 1 0 0 1 -1 False</ff>
+          </table>
+          <variable>Bourse</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>Etatdesante</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+        <variable id="UMR033BPEWS7">
+          <formats>
+            <format mode="MaxValues" nvalues="1" nmode="0" apply="7" fillcolor="13434828" />
+          </formats>
+          <rect x="341" y="6760" w="651" h="516" />
+          <variable>Sommeil</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </variable>
+        <group id="EMLSZV00F9T9">
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <rect x="1331" y="4665" w="619" h="1127" />
+          <table>
+            <ff>1 0 0 0 1 -1 False</ff>
+          </table>
+          <graph model="stcol2">
+            <models ff="stcol2" fn="bar0" nn="bar0" />
+            <type>13</type>
+            <colors mode="6" palette="b" />
+            <ff>1 0 1 1 1</ff>
+            <fn>1 1 1 1</fn>
+            <nn>1 1 1 0 0</nn>
+          </graph>
+          <variable>Fumeur</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>deptformation</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+        <group id="JD64I7W4FTX8">
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <rect x="1207" y="6718" w="683" h="651" />
+          <table>
+            <ff>1 0 0 0 1 -1 False</ff>
+          </table>
+          <variable>Poids</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>deptformation</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+        <group id="3DBGZ3B6FTJI">
+          <formats>
+            <format mode="OverRepresented" significants="1" textcolor="16711680" fontname="Arial" fontsize="9" fontstyle="4" />
+            <format mode="UnderRepresented" significants="1" textcolor="10305744" fontname="Arial" fontsize="9" fontstyle="4" />
+          </formats>
+          <rect x="1003" y="7403" w="619" h="1127" />
+          <table>
+            <ff>1 0 0 0 1 -1 False</ff>
+          </table>
+          <graph model="stcol2">
+            <models ff="stcol2" fn="bar0" nn="bar0" />
+            <type>13</type>
+            <colors mode="6" palette="b" />
+            <ff>1 0 1 1 1</ff>
+            <fn>1 1 1 1</fn>
+            <nn>1 1 1 0 0</nn>
+          </graph>
+          <variable>Sport</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>1 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+          <variable>deptformation</variable>
+          <rules>
+            <options>0 0 0 0 1</options>
+            <od>0 2</od>
+            <oc>0 0 0</oc>
+            <on>1 1 6 3 100 4 0</on>
+            <ot>1 1 0</ot>
+            <simplify>9 0 0 0 0 20</simplify>
+            <item>...</item>
+          </rules>
+        </group>
+      </view>
+    </views>
+  </eureka>
+</sphinx>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<board bypass-restricted-results-access="0" version="1.0.10">
+  <name>
+    <fr><![CDATA[synthese reponse]]></fr>
+  </name>
+  <options cascadingfilters="1" displaysampleinfo="1" displaysampleonanalysis="1" enableresponsive="0" displaynavigationbuttons="1" displaypaginationbar="1" paginationposition="Bottom">
+    <pageformat device-type="Desktop" width="1370" height="768" />
+    <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+      <filtering-options />
+      <header-format type="TEXT" size="24" />
+      <thresholds>
+        <ff ts="0.01" s="0.05" ps="0.15" />
+        <fn ts="0.01" s="0.05" ps="0.15" />
+        <nn ts="0.8" s="0.6" ps="0.4" />
+      </thresholds>
+    </format>
+    <runtimeexport allowexport="0" />
+  </options>
+  <skin id="57f4e33b-0d62-0e11-a030-1697a6744d5f" name="SphinxDefaultSkin">
+    <colorset gradient="1" type="Monocolor">
+      <colors>rgb(153,117,147);#ab81a4;#d9c4d6;#cecece</colors>
+    </colorset>
+    <boardstyle background="rgba(226, 226, 226, 1)" viewbackground="rgba(101, 92, 100, 0.1)">
+      <borderstyle color="transparent" thickness="1" style="solid" radius="0" />
+    </boardstyle>
+    <analysisstyle background="transparent" significativepositivevalue="#3d8eb9" significativenegativevalue="#ea4c87">
+      <borderstyle color="transparent" thickness="1" style="solid" radius="0" />
+      <titlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="14" color="#333" fontweight="1" fontstyle="0" />
+      <metricstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="1" />
+      <teststatstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="1" />
+    </analysisstyle>
+    <chartstyle verbatimfontfamily="Arial, Helvetica, sans-serif" backgroundcolor="transparent" xychartkeepthickness="1" animate="1">
+      <datalabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" automatic="1" />
+      <axevaluestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <axetitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <legendstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+      <indicatorvalue fontfamily="Arial, Helvetica, sans-serif" fontsize="96" color="#333" fontweight="1" fontstyle="0" automatic="1" automaticfontsize="1" />
+      <indicatorvaluelabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <gaugeextremitylabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <filliconlabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <filliconvaluelabelstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#d6d6d6" fontweight="0" fontstyle="0" />
+      <separatorstyle color="#333" thickness="2" style="dashed" />
+      <xychartthickness enable="0" thickness="10" />
+    </chartstyle>
+    <tablestyle hovercolor="rgba(0, 0, 0, 0.15)" alternatingprincipalcolor="rgba(255, 255, 255, 0)" alternatingsecondcolor="rgba(0, 0, 0, 0.03)" totalbackgroundcolor="rgba(0, 0, 0, 0.07)" bordercolor="rgba(0, 0, 0, 0.1)" headercolor="transparent" cellchartbackgroundcolor="transparent">
+      <columntitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+      <linetitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <cellstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <cellchartstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="11" color="#333" fontweight="0" fontstyle="0" automatic="1" />
+    </tablestyle>
+    <characteristicstablestyle>
+      <columntitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+      <linetitlestyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="0" fontstyle="0" />
+      <cellstyle fontfamily="Arial, Helvetica, sans-serif" fontsize="12" color="#333" fontweight="1" fontstyle="0" />
+    </characteristicstablestyle>
+    <shapestyle fillcolor="rgb(153,117,147)">
+      <borderstyle color="#333" thickness="1" style="solid" radius="0" />
+    </shapestyle>
+    <imagestyle effect="None" color="transparent" />
+    <viewtextstyle backgroundcolor="transparent">
+      <borderstyle color="transparent" thickness="1" style="solid" radius="0" />
+    </viewtextstyle>
+    <relationstyle>
+      <linestyle color="black" thickness="1" style="solid" />
+      <colors>rgb(255, 255, 255);rgb(202, 217, 210);rgb(143, 206, 174);rgb(11, 201, 106);rgb(255, 255, 255);rgb(202, 217, 210);rgb(143, 206, 174);rgb(11, 201, 106)</colors>
+    </relationstyle>
+  </skin>
+  <dataproviders>
+    <provider type="WebSurvey" account="iq" survey="EnqueteSanteIQ3" id="e5ae1c0d-7424-44fa-9e37-902f622668cb" />
+  </dataproviders>
+  <filters device-type="Desktop">
+    <filter id="f227f3cb-25bd-4067-b60a-e5ae9a65181f">
+      <skin />
+      <scenarii>
+        <scenario trigger="OnClick">
+          <action type="Filter" analysis="" items="" showglobalsample="0" />
+        </scenario>
+      </scenarii>
+      <title visible="1">sexe</title>
+      <view visible="1" type="List" multi="1" values="1" />
+      <data type="Flat">
+        <field>
+          <source itemid="1685211715" />
+          <provider id="e5ae1c0d-7424-44fa-9e37-902f622668cb">
+            <item id="1685211715" />
+          </provider>
+          <options noresponse="0" notconcerned="0">
+            <categories enabled="0" showleafs="1" />
+            <itemweights enabled="0" />
+            <simplify>
+              <frequencies enabled="1" />
+            </simplify>
+            <format />
+          </options>
+          <images />
+        </field>
+        <sort type="None" direction="Descending" useshownvalue="1" />
+        <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+          <filtering-options />
+          <header-format type="TEXT" size="24" />
+        </format>
+      </data>
+    </filter>
+  </filters>
+  <pages device-type="Desktop">
+    <canvas id="e1fc5e60-6009-4907-bbd0-0d2f32f4022d">
+      <analysis id="fb25f731-8816-41ee-9bd0-33d573570928" canvas-top="173" canvas-left="408" canvas-height="350" canvas-width="660" canvas-mask="0" canvas-zindex="1" canvas-rotate="0">
+        <skin />
+        <scenarii />
+        <title visible="1">
+          <fr auto="1"><![CDATA[Combien de cigarettes fumez-vous par jour?]]></fr>
+        </title>
+        <description value="0" icon="fa-info-circle" iconcolor="rgb(51,51,51)" backgroundcolor="#1c1e21" placement="Right" />
+        <table visible="0" type="ValuesTable">
+          <display height="300" columnswidth="[]" />
+          <export xls="0" />
+          <values chartheight="20" verbatim-display="Table" verbatim-display-mode="Record" thema-polarity-display="Detailed" showgraphvalues="1">
+            <columns count="0" percent="1" percentchart="0" theoreticalfrequency="0" deviationfromtheoretical="0" testfreqcompsymbol="0" testfreqcomppvalue="0">
+              <conditional-displays />
+            </columns>
+            <total enabled="1" />
+          </values>
+        </table>
+        <chart visible="1" showtotal="0" selected="XYAxisChart" placement="Right">
+          <legend show="0" horizontalalign="center" verticalalign="bottom" layout="horizontal" floating="0" />
+          <showvalue available="1" value="1" position="Outside" showcontentnames="0" showcontentvalue="1" />
+          <grid showgrid="0" showgraduations="1" />
+          <limits available="1" value="0" />
+          <xyaxischart charttype="Bar" add_aggregated_values="0" showresultsbutton="0">
+            <chartwidth enabled="0" value="250" />
+            <rlnoptions threshold="5" stepbystep="1" computevif="1" />
+          </xyaxischart>
+          <values count="0" percent="0" selected="Percent" />
+        </chart>
+        <metrics visible="0" count="1" nonresponses="0" responserate="1" modelabel="0" />
+        <test-stat visible="0" khi2="1" />
+        <colorizesignificantvalues enabled="0" value="All" />
+        <data type="Flat" aggregate_values="0">
+          <field>
+            <source itemid="2076232929" />
+            <provider id="e5ae1c0d-7424-44fa-9e37-902f622668cb">
+              <item id="2076232929" />
+            </provider>
+            <options noresponse="0" notconcerned="0">
+              <categories enabled="0" showleafs="1" />
+              <itemweights enabled="0" />
+              <simplify>
+                <frequencies enabled="1" />
+              </simplify>
+              <format />
+            </options>
+            <images />
+          </field>
+          <sort type="None" direction="Descending" statvalue="Count">
+            <simplify enabled="1" nbelements="100" regroup="1" ignoreHidden="0">
+              <regrouplabel>
+                <en><![CDATA[...]]></en>
+                <de><![CDATA[…]]></de>
+                <es><![CDATA[…]]></es>
+                <fr><![CDATA[...]]></fr>
+                <it><![CDATA[...]]></it>
+                <nl><![CDATA[...]]></nl>
+                <pl><![CDATA[...]]></pl>
+                <pt><![CDATA[...]]></pt>
+              </regrouplabel>
+            </simplify>
+          </sort>
+          <format nbdecimalsnum="1" nbdecimalsper="0" variable-naming="Label" ignore-adjustment="0">
+            <filtering-options />
+            <header-format type="TEXT" size="24" />
+          </format>
+        </data>
+      </analysis>
+    </canvas>
+  </pages>
+</board>

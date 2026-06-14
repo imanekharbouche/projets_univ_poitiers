@@ -1,0 +1,545 @@
+% =====================================================================
+% Rapport d'alternance, BUT Science des Données (2e année)
+% Imane KHARBOUCHE, DSI de Niort Agglo, 2025-2026
+% Moteur : XeLaTeX
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\newfontfamily\headingfont{TeX Gyre Heros}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+\setotherlanguage{english}
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.6cm,right=2.6cm]{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F6F8B}
+\definecolor{accent2}{HTML}{2E8B57}
+\definecolor{greytext}{HTML}{555555}
+\definecolor{rule}{HTML}{1F6F8B}
+
+\usepackage{titlesec}
+\titleformat{\section}
+ {\headingfont\Large\bfseries\color{accent}}{\thesection.}{0.6em}{}
+ [\vspace{2pt}{\color{rule}\titlerule[1pt]}]
+\titleformat{\subsection}
+ {\headingfont\large\bfseries\color{accent2}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}
+ {\headingfont\normalsize\bfseries\color{greytext}}{}{0em}{}
+\titlespacing*{\section}{0pt}{18pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Alph{subsection}.}
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+
+% --- Compact table of contents (fit on one page) ---
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{8pt}
+\setlength{\cftbeforesubsecskip}{3.5pt}
+\renewcommand{\cftsecfont}{\headingfont\bfseries\color{accent}}
+\renewcommand{\cftsecpagefont}{\headingfont\bfseries\color{accent}}
+\renewcommand{\cftsubsecfont}{\normalsize\color{greytext}}
+\renewcommand{\cftsubsecpagefont}{\normalsize\color{greytext}}
+\renewcommand{\cftsubsubsecfont}{\footnotesize\color{greytext}}
+\renewcommand{\cftsubsubsecpagefont}{\footnotesize\color{greytext}}
+% --- Dot leaders for all TOC levels ---
+\renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+\renewcommand{\cftsecdotsep}{4.5}
+\renewcommand{\cftsubsecdotsep}{4.5}
+\renewcommand{\cftsubsubsecdotsep}{4.5}
+\renewcommand{\cftdotsep}{4.5}
+
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.4em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead[L]{\footnotesize\color{greytext}Imane Kharbouche, Rapport d'alternance}
+\fancyhead[R]{\footnotesize\color{greytext}DSI de Niort Agglo · 2025-2026}
+\fancyfoot[C]{\thepage}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,citecolor=accent,
+ pdftitle={Conception d'un entrepôt de données pour le pilotage des achats responsables (SPASER)},
+ pdfauthor={Imane Kharbouche}}
+
+% --- Clickable superscript references to Lexique ---
+\newcommand{\lexref}[1]{\hyperlink{lex:#1}{\textsuperscript{#1}}}
+
+% --- Real figure: \rfig{path}{width-fraction}{caption} ---
+\usepackage{graphicx}
+\usepackage{float}
+\newcommand{\rfig}[3]{%
+ \begin{figure}[htbp]\centering
+ \includegraphics[width=#2\linewidth,keepaspectratio]{#1}
+ \caption{#3}
+ \end{figure}}
+
+\usepackage{caption}
+\captionsetup{font={small,it},labelfont={bf,color=accent},labelsep=period}
+
+% Float packing: allow figures to fill more of each page
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
+
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{1.2em}
+
+\begin{document}
+
+% =====================================================================
+% PAGE DE GARDE (cover_page.svg -> cover_page.pdf, pleine page)
+% =====================================================================
+\begin{titlepage}
+\thispagestyle{empty}
+\newgeometry{margin=0pt}
+\noindent\makebox[\textwidth][c]{%
+  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{cover_page.pdf}}
+\restoregeometry
+\end{titlepage}
+
+% =====================================================================
+% SOMMAIRE
+% =====================================================================
+\newpage
+\renewcommand{\contentsname}{\headingfont\color{accent}Sommaire}
+\tableofcontents
+\thispagestyle{fancy}
+
+% =====================================================================
+% RÉSUMÉ / ABSTRACT / LOGICIELS
+% =====================================================================
+\newpage
+\section*{Résumé}
+\addcontentsline{toc}{section}{Résumé}
+
+\subsection*{Version française}
+Niort Agglo, la Ville de Niort et son CCAS engagent plus de 70 millions d'euros par an en achats publics. Pour que ces dépenses soutiennent l'insertion professionnelle, l'économie locale et la transition écologique, les trois collectivités ont adopté un SPASER (Schéma de Promotion des Achats Socialement et Écologiquement Responsables). Ce document fixe des objectifs chiffrés, comme la part des marchés attribués à des entreprises locales ou intégrant des clauses sociales. Mais jusqu'à présent, personne ne pouvait calculer ces indicateurs de façon précise et cohérente.
+
+C'est précisément le cœur de mon alternance. D'août 2025 à juillet 2027, sur les deux années d'un contrat d'apprentissage couvrant ma 2\textsuperscript{e} puis ma 3\textsuperscript{e} année de BUT Science des Données, je travaille à la Direction des Systèmes d'Information de Niort Agglo, une DSI mutualisée au service de quatre entités (CAN, Ville de Niort, CCAS, SPL Eaux), pour construire l'entrepôt de données qui rendra ces indicateurs calculables. Je suis rattachée au Service Accompagnement et Valorisation de la Donnée (SAVD).
+
+Cette première année a été riche en apprentissages. Je suis arrivée sans maîtriser les outils du décisionnel (Talend, Oracle, BusinessObjects) et je les ai appris sur un projet d'initiation portant sur l'Active Directory, où j'ai produit un tableau de bord cartographiant 6 collectivités, 113 directions, 452 services et 2\,132 utilisateurs, et identifié une longue série de comptes inactifs, dont certains n'avaient jamais été activés.
+
+À partir de mars 2026, j'ai engagé le projet de la commande publique. J'ai exploré la base alimentée par le logiciel métier SEDIT et y ai trouvé une donnée loin d'être prête : tables vides, montants à reconstituer entre colonnes concurrentes, numéros SIRET fréquemment absents. J'ai développé en Python un script doté d'une interface graphique qui centralise automatiquement les fiches de recensement que les acheteurs complètent manuellement. J'ai conçu et alimenté les traitements Talend qui peuplent un entrepôt Oracle structuré en deux étages, ODS puis DWH. J'ai enfin construit le système de croisement avec l'API Sirene de l'INSEE, selon une logique en deux passages qui contourne les blocages anti-robot rencontrés sur les appels en volume : un premier job isole les SIRET en échec dans un fichier de rejet, un second les reprend avec temporisation. La restitution se fait par un univers BusinessObjects qui permet aux agents de la commande publique d'interroger leurs propres indicateurs sans écrire une ligne de code.
+
+L'ensemble du travail a été commenté et documenté pour rester réutilisable par la DSI, et pour me permettre de le poursuivre après le mois d'août, lorsque je reprendrai à la DSI pour la deuxième année de mon apprentissage.
+
+\textbf{Mots-clés :} entrepôt de données, ETL, qualité de données, commande publique, SPASER, Python, API Sirene.
+
+\newpage
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+\begin{english}
+Every year, Niort Agglo, the City of Niort, and their CCAS allocate over 70 million euros on public procurement. To make sure this money supports local jobs, social inclusion, and environmental goals, the three authorities adopted a SPASER (Strategic Plan for Socially and Ecologically Responsible Purchasing). This plan sets measurable targets, such as the percentage of contracts awarded to local businesses or those including social clauses. The difficulty was that no one could actually measure them.
+
+Filling this gap is the main goal of my apprenticeship. This is a two-year programme running from August 2025 to July 2027, spanning the second and third years of the BUT Science des Données. I work at the Information Systems Department of Niort Agglo to build the data warehouse that will turn those commitments from policy aspirations into figures that can be published. The Department is itself a shared structure, serving four public bodies at once (the Communauté d'Agglomération du Niortais, the City of Niort, the Centre Communal d'Action Sociale and the public water company SPL Eaux). I am part of its Data Support and Valorisation Service (SAVD), whose remit is to ensure data reliability and consistency across these authorities, so that the data is genuinely fit for decision-making.
+
+The first year has been a steep learning curve. I arrived without any working knowledge of the tools the project demanded (Talend, Oracle, BusinessObjects) and was first assigned a smaller, lower-stakes project: improving the reliability of the Active Directory. There I produced a dashboard mapping six authorities, 113 directions, 452 services and 2,132 users, and identified a long series of dormant accounts, several of which had never once been opened.
+
+The procurement project itself began in March 2026. Working directly against the database behind SEDIT, the procurement and finance software, I found a source in poor shape: tables that should have been populated were empty, amounts had to be reconstructed from competing columns, and supplier SIRET numbers were missing more often than not. I built a Python tool with a graphical interface that automates the manual centralisation of the buyers' procurement record sheets. I then designed the Talend pipelines that feed an Oracle warehouse organised in two tiers: an ODS for staging and cleaning, and a DWH for analysis. The most demanding part was the enrichment layer that retrieves supplier metadata from the INSEE Sirene API: at high volume, the API treats sustained calls as scraping and returns a Bad Gateway error. I addressed this with a two-pass design. The first job diverts every failed SIRET to a rejection file; the second picks that file up and retries each entry with throttled requests until the lookup completes. Everything is then exposed through a BusinessObjects universe, so that procurement officers can query their own indicators without writing a single line of code.
+
+Alongside the main project, I have continued the data-quality work on the Active Directory and on GLPI, the asset and ticketing platform, applying the same routine throughout: extract, cross-reference, expose the inconsistencies, and hand them back to the teams equipped to act.
+
+Everything has been commented and documented, partly to ensure the long-term viability of the work for the Department, and mostly so that I can resume precisely where I left off when I return in August. The second act starts then.
+\end{english}
+
+% =====================================================================
+% AVANT-PROPOS + LOGICIELS (même page)
+% =====================================================================
+\newpage
+\section*{Avant-propos}
+\addcontentsline{toc}{section}{Avant-propos}
+Je suis actuellement en 2\textsuperscript{e} année de BUT Science des Données (Bachelor Universitaire de Technologie SD), formation dispensée à l'Université de Poitiers sur le site de Niort. Ce cursus, qui dure trois ans, forme aux différents aspects de la gestion des données : les stocker, les nettoyer, les analyser et les présenter pour aider à la prise de décision.
+
+À partir de la 2\textsuperscript{e} année, les étudiants choisissent entre deux spécialisations :
+\begin{itemize}
+\item \textbf{VCOD} (Visualisation et Création d'Outils d'Analyse) : pour ceux qui veulent concevoir des tableaux de bord et des outils d'aide à la décision.
+\item \textbf{EMS} (Exploration et Modélisation Statistique) : pour ceux qui préfèrent l'analyse statistique avancée.
+\end{itemize}
+J'ai choisi le parcours VCOD, car je voulais approfondir la création d'outils et la visualisation des données.
+
+Pour appuyer la dimension professionnalisante de cette formation, j'ai choisi de m'engager dans un contrat d'apprentissage de deux ans, couvrant ma 2\textsuperscript{e} et ma 3\textsuperscript{e} année de BUT. Ce contrat a débuté en août 2025 et se poursuivra jusqu'en juillet 2027.
+
+\subsection*{Logiciels utilisés}
+\begin{itemize}
+\item \textbf{Toad for Oracle}, gestionnaire de la base de données Oracle (entrepôt de destination)
+\item \textbf{Talend Open Studio}, logiciel ETL pour les flux d'intégration des données
+\item \textbf{Outil de Conception d'Information} (\textit{Information Design Tool}), créateur d'univers BusinessObjects
+\item \textbf{SAP BusinessObjects}, logiciel d'informatique décisionnelle et de création de rapports
+\item \textbf{Python 3} (bibliothèques \texttt{openpyxl}, \texttt{tkinter}, \texttt{glob}), script d'automatisation des fiches SPASER
+\item \textbf{SEDIT} (Berger-Levrault), logiciel métier de gestion financière et des marchés publics (source de données)
+\end{itemize}
+
+% =====================================================================
+% REMERCIEMENTS
+% =====================================================================
+\newpage
+\section*{Remerciements}
+\addcontentsline{toc}{section}{Remerciements}
+J'aimerais avant tout remercier la Direction des Systèmes d'Information de Niort Agglo de m'avoir accueillie en alternance pour cette année 2025-2026. Merci à l'ensemble des agents de la DSI pour leur accueil et leur disponibilité.
+
+Je remercie plus particulièrement ma tutrice professionnelle, Valérie \textsc{Mallé}, qui m'a fait confiance sur un projet d'envergure dès mon arrivée. Elle a su me laisser l'autonomie nécessaire pour avancer tout en restant disponible quand je butais sur une difficulté, et a pris le temps de m'expliquer ce que je ne comprenais pas. J'ai beaucoup appris à son contact.
+
+Je remercie également Thomas \textsc{Bucheron}, technicien décisionnel au sein du service, ainsi que Léa \textsc{Porcher}, alternante de 3\textsuperscript{e} année dont j'ai partagé le bureau pendant mon premier mois et qui m'a accompagnée dans mon intégration.
+
+Mes remerciements vont aussi aux agents de la direction de la commande publique de Niort Agglo et de la Ville de Niort : sans leur patience pour m'expliquer un métier que je ne connaissais pas, le projet SPASER n'aurait jamais pu aboutir.
+
+Je remercie enfin Monsieur Éric \textsc{Payet}, mon tuteur pédagogique à l'IUT de Niort, pour son suivi et ses conseils tout au long de l'année, ainsi que l'ensemble de l'équipe enseignante du BUT Science des Données, qui m'a donné les bases sur lesquelles j'ai pu m'appuyer.
+
+% =====================================================================
+% INTRODUCTION
+% =====================================================================
+\newpage
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+En 2023, plus de 70 millions d'euros ont été engagés en achats publics par la Communauté d'Agglomération du Niortais et la Ville de Niort. Chaque dépense représente un choix : quel fournisseur sélectionner, quel produit ou service acheter, et à quelles conditions. Depuis la loi AGEC\lexref{1} de 2020 et l'obligation faite aux grandes collectivités d'adopter un SPASER\lexref{2}, la commande publique n'est plus seulement un outil de gestion : elle est devenue un levier de politique publique, un moyen d'agir, par l'achat, sur l'insertion, l'emploi local et la transition écologique.
+
+J'ai signé pour cela un contrat d'apprentissage de deux ans à la Direction des Systèmes d'Information (DSI) de Niort Agglo, qui a débuté en août 2025 et se poursuit jusqu'en juillet 2027, couvrant ainsi ma 2\textsuperscript{e} puis ma 3\textsuperscript{e} année de BUT SD. Ce rapport ne décrit donc pas une mission terminée, mais le premier acte d'un projet qui en comptera deux. La DSI de Niort Agglo assure la gestion des données pour l'ensemble de l'agglomération, de la Ville de Niort, du CCAS et de la société publique des eaux. Curieuse de comprendre comment la donnée est produite et exploitée à l'échelle d'une collectivité, j'ai voulu intégrer cette structure pour y contribuer au niveau décisionnel. J'y ai été rattachée au Service Accompagnement et Valorisation de la Donnée (SAVD), où ma mission principale a été, et reste, de construire un entrepôt de données pour la commande publique, destiné au calcul des indicateurs du SPASER. J'ai également mené, en amont et autour de cette mission, deux chantiers internes de la DSI portant sur la qualité des données de l'Active Directory\lexref{3} et du logiciel GLPI\lexref{4}.
+
+L'objectif de ce rapport est de présenter la démarche technique et méthodologique mise en œuvre pour structurer ces données complexes et aboutir à un outil de pilotage fiable, adapté aux besoins de la collectivité.
+
+Dans un premier temps, je présenterai ma structure et mon service d'accueil. Dans un deuxième temps, je reviendrai sur la fiabilisation des référentiels, l'Active Directory puis GLPI : ce travail de qualité a été à la fois mon entraînement et le socle sur lequel le reste a pu se construire. Dans un dernier temps, je détaillerai ma mission principale, le projet SPASER, à travers son contexte, sa démarche et ses résultats.
+
+Les définitions des termes techniques, identifiables par un numéro en exposant, sont regroupées dans le lexique à la fin du document.
+
+% =====================================================================
+% I. PRÉSENTATION DE LA STRUCTURE
+% =====================================================================
+\section{Présentation de la structure d'accueil}
+
+\subsection{La Communauté d'Agglomération du Niortais, un acteur territorial important}
+La Communauté d'Agglomération du Niortais (CAN) est un établissement public de coopération intercommunale créé en 2014. Elle regroupe 40 communes, environ 123\,000 habitants, et assure les services publics du territoire : déchets, transports, eau, développement économique. Elle travaille de longue date avec la Ville de Niort (VDN) et son Centre Communal d'Action Sociale (CCAS). Cette proximité les a conduits à mutualiser plusieurs fonctions support, dont l'informatique, celle qui m'intéresse directement.
+
+\subsection{La Direction des Systèmes d'Information, une ressource mutualisée au service de plusieurs collectivités}
+La DSI de Niort Agglo est une direction mutualisée. Depuis 2018, les services informatiques de la CAN et de la VDN ont fusionné en une structure unique, qui sert aujourd'hui ces deux collectivités ainsi que le CCAS et la SPL Eaux. Une seule équipe informatique gère donc les besoins de quatre structures différentes. Elle gère l'infrastructure et les serveurs, met à disposition les applications métiers et le matériel, pilote les projets informatiques et veille à la sécurité des données et à la conformité au RGPD\lexref{5}.
+
+L'intérêt de cette mutualisation est double. Elle évite de dupliquer les équipes, les outils et les coûts d'une collectivité à l'autre. Surtout, et c'est ce qui compte le plus pour une étudiante en données, elle pousse vers la cohérence : quand une seule direction administre les outils de plusieurs collectivités, elle a tout intérêt à ce qu'un «~marché public~» désigne la même chose côté Ville et côté Agglo. La mutualisation n'est pas qu'une affaire de budget ; c'est aussi une affaire de référentiel commun. Elle crée d'ailleurs sa propre difficulté : chaque entité a son histoire et ses habitudes, et faire travailler tout le monde sur des données comparables est l'un des enjeux que j'ai rencontrés sur mon projet.
+
+\rfig{fig_2.png}{0.62}{Organigramme de la DSI mutualisée et de ses quatre services (source : DSI Niort Agglo, 2023).}
+
+\subsection{Les services de la DSI et leurs rôles}
+Au sein de la DSI, le travail est réparti entre plusieurs services. J'en donne ici une lecture rapide, à hauteur de ce que j'en perçois après quelques mois sur place.
+
+Il y a d'abord le \textbf{Service d'Assistance aux Utilisateurs (SAU)}, qui répond aux agents en cas de dysfonctionnement. Il réceptionne les tickets ouverts sur GLPI, du problème de messagerie au PC qui ne démarre plus, et décide soit de traiter directement, soit de transmettre au bon interlocuteur. Le SAU tient également à jour l'inventaire du parc (postes, tablettes, téléphones, imprimantes) et s'occupe d'installer et de mettre à jour les logiciels sur les machines.
+
+Un autre service, le \textbf{Service Infrastructure et Systèmes Numériques (SISN)}, prend en charge la partie invisible mais critique : les serveurs et les réseaux. Il met en œuvre les ressources nécessaires pour qu'une application reste accessible et qu'une base de données réponde. C'est aussi le SISN qui pilote la sécurité informatique, en lien avec le Délégué à la Protection des Données (DPO) pour tout ce qui touche au RGPD\lexref{5}.
+
+Vient ensuite le \textbf{Service Projets, Études et Applications (SPEA)}, qui fait l'interface entre les outils et les métiers. Quand une direction utilise un logiciel, gestion financière, état civil, gestion des déchets, il y a quelqu'un côté DSI qui le connaît, le paramètre et le fait évoluer avec elle. C'est un travail de traduction permanente entre des besoins exprimés en langage métier et des configurations exprimées en langage informatique.
+
+Enfin, l'\textbf{Unité Administrative (UA)} s'occupe de tout ce qui fait tourner la DSI elle-même : le budget, les marchés publics dont elle a besoin, la dimension administrative du quotidien.
+
+\rfig{fig_1.png}{0.86}{Chiffres clés de la DSI : 36 personnes, plus de 130 sites connectés, 188 bases de données, 8\,047 tickets en 2022 (source : DSI Niort Agglo, 2023).}
+
+\rfig{fig_3.png}{0.58}{Répartition des 36 agents de la DSI par service.}
+
+\subsection{Mon service d'accueil, le Service Accompagnement et Valorisation de la Donnée (SAVD)}
+J'ai été rattachée au Service Accompagnement et Valorisation de la Donnée (SAVD). Il joue le rôle de trait d'union entre l'infrastructure technique et les directions métiers. Sa mission principale est double. D'une part, il structure, fiabilise et urbanise le patrimoine de données de la collectivité. D'autre part, il agit comme un facilitateur : il met à disposition des agents les bons outils et les accompagne pour qu'ils deviennent autonomes dans l'exploitation de leurs propres indicateurs.
+
+Concrètement, son activité se structure autour de trois missions complémentaires.
+
+La première, c'est le \textbf{référentiel}. Poser les règles : comment une donnée est-elle nommée ? qui en est responsable ? par quels circuits transite-t-elle ? quelle version fait foi ? L'objectif est d'éviter qu'on se retrouve avec trois chiffres différents pour une même réalité selon le service interrogé. C'est un travail de fond, peu visible, mais c'est lui qui garantit la cohérence de tout le reste.
+
+La deuxième relève de l'\textbf{urbanisme et de l'architecture du système d'information}. Le service veille à ce que les différents logiciels et bases de données s'articulent de manière cohérente, et à ce qu'une donnée saisie quelque part puisse être réutilisée ailleurs sans avoir à être ressaisie. C'est ici que se situe la conception des entrepôts de données, et donc mon projet.
+
+La troisième, enfin, c'est l'\textbf{accompagnement et la stratégie data}. Le service ne construit pas lui-même les tableaux de bord des directions : il met à leur disposition les données et les applications pour qu'elles puissent le faire. Cela passe par un accompagnement à la bonne utilisation de BusinessObjects, en cours de mise en place par Thomas, et par une réflexion plus large autour de la donnée et de l'IA dans la collectivité.
+
+Le service se compose de plusieurs postes aux spécialités complémentaires : un Data Manager qui pilote la stratégie autour de la donnée et son acculturation auprès des autres directions, un technicien décisionnel qui développe les tableaux de bord et administre les outils décisionnels (BusinessObjects\lexref{6} notamment), un technicien SIG qui prend en charge les données cartographiques, et moi-même, alternante en 2\textsuperscript{e} année. À noter que les postes de Data Manager et de technicien SIG sont actuellement en cours de recrutement.
+
+\rfig{pg.png}{0.90}{Organigramme de l'équipe du Service Accompagnement et Valorisation de la Donnée (SAVD).}
+
+
+
+% =====================================================================
+% II. FIABILISATION DES RÉFÉRENTIELS
+% =====================================================================
+\section{La fiabilisation des référentiels, un prérequis à la qualité (Active Directory et GLPI)}
+Quand j'ai commencé mon alternance en août 2025, je ne connaissais pas encore les outils dont j'allais avoir besoin. Par exemple, les cours sur Talend n'ont commencé qu'en octobre, et ceux sur BusinessObjects encore plus tard, au second semestre. Le projet de la commande publique, qui supposait de croiser plusieurs sources et de manipuler des dizaines de milliers de lignes, était bien trop complexe pour débuter. Ma tutrice m'a donc confié, comme premier projet, la fiabilisation de l'Active Directory. C'est avec ce projet que j'ai appris Talend, ligne après ligne, et que j'ai compris ce qu'extraire, nettoyer et croiser des données voulait dire au-delà des exercices scolaires. Ce projet m'a servi d'application pratique : il m'a permis d'éprouver la méthode décisionnelle en conditions réelles avant d'aborder la thématique plus complexe du SPASER. Si je le présente avant la mission principale, c'est parce qu'il répondait à un vrai besoin opérationnel, et que le travail mené a produit des livrables réellement utilisés par la DSI. Cette partie regroupe les deux chantiers de qualité que j'ai menés sur les référentiels internes de la collectivité : d'abord l'Active Directory, mon véritable terrain d'apprentissage, puis le parc informatique géré sous GLPI. La logique est la même dans les deux cas : avant de pouvoir piloter quoi que ce soit, il faut une donnée fiable.
+
+\subsection{L'Active Directory, un annuaire nécessitant une mise à jour continue}
+Un mot d'abord sur ce qu'est l'Active Directory\lexref{3}, l'AD, comme on l'appelle à la DSI. C'est l'annuaire central du système d'information. Il recense l'ensemble des comptes (utilisateurs, machines, groupes) et gère qui a le droit d'accéder à quoi. Quand un agent ouvre sa session le matin, c'est l'AD qui vérifie son identité.
+
+Le problème d'un annuaire, c'est qu'il doit être vérifié et mis à jour en permanence. Les agents arrivent, changent de service, partent. À chaque mouvement, l'AD doit être mis à jour, mais en pratique, des écarts de synchronisation apparaissent inévitablement avec le temps.
+
+\subsection{Donner de la visibilité, tableau de bord et comptes inactifs}
+Ma contribution a consisté à donner de la visibilité sur cet état des lieux. J'ai d'abord extrait les données de l'AD pour en obtenir une image exploitable, à plat, dans un format analysable. Pour permettre les croisements, j'ai modélisé ces extractions brutes sous la forme d'un schéma relationnel, reliant logiquement les utilisateurs, les groupes, les services et les directions.
+
+\rfig{fig_4.png}{0.92}{Modélisation conceptuelle des données (MCD) de l'Active Directory pour l'analyse décisionnelle.}
+
+J'ai produit à partir de cette extraction un tableau de bord d'ensemble : \textbf{6 collectivités, 113 directions, 452 services, 2\,132 utilisateurs et 10 groupes} principaux, avec la répartition des utilisateurs par collectivité (CAN, VDN, CCAS, SEN, SEV, ASS) et la densité de services par direction.
+
+J'ai ensuite croisé cette image avec d'autres sources de référence pour faire ressortir les écarts : les comptes qui ne correspondaient plus à une situation réelle, les informations incohérentes, les cas à vérifier. La méthode la plus parlante a été d'analyser les dates de dernier accès. De nombreux comptes ressortaient avec une date de dernier accès au 1\textsuperscript{er} janvier 1601, la valeur par défaut de Windows pour un compte qui n'a jamais été utilisé, répartis sur l'ensemble des collectivités. D'autres affichaient un dernier accès en 2021 ou 2022, sans qu'aucune trace d'activité plus récente n'existe. Toutes ces lignes ont été remontées sous forme d'une liste fiable et priorisée, transmise aux équipes responsables de l'AD pour décision et action. L'objectif n'était pas de décider à leur place : c'était de leur donner un outil de pilotage qui n'existait pas.
+
+\rfig{fig_6.png}{0.80}{Extrait de la liste des comptes inactifs identifiés dans l'AD (date de dernier accès = 01/01/1601, valeur par défaut pour un compte jamais utilisé).}
+
+\rfig{fig_5.png}{0.82}{Tableau de bord d'analyse de l'Active Directory.}
+
+\subsection{Le parc informatique, fiabiliser GLPI et le croiser avec l'Active Directory}
+Le second chantier de fiabilisation portait sur GLPI\lexref{4}, le logiciel que la DSI utilise pour deux choses. D'une part, la gestion du parc : l'inventaire de tout le matériel et des logiciels (ordinateurs, écrans, équipements réseau, licences). D'autre part, la gestion des tickets : quand un agent rencontre un souci informatique, il ouvre un ticket dans GLPI, et c'est par là que l'assistance suit et traite la demande.
+
+Là encore, l'intérêt de l'outil dépend entièrement de la qualité de ce qu'il contient. Un inventaire de parc n'a de valeur que s'il est juste. Si des équipements ne sont rattachés à personne, si des machines figurent encore alors qu'elles ont été retirées, si les informations sont saisies de façon hétérogène d'un enregistrement à l'autre, alors GLPI cesse d'être un outil de pilotage et devient une simple base approximative.
+
+Mon travail a suivi la même logique que sur l'AD. J'ai extrait les données du parc et je les ai examinées pour y repérer les incohérences, les manques et les doublons. Un aspect m'a particulièrement intéressée : le \textbf{croisement entre GLPI et l'Active Directory}. Les deux outils décrivent en partie la même réalité, un poste de travail recensé dans GLPI doit logiquement correspondre à un utilisateur et à une machine connus de l'AD. Confronter les deux sources permet de faire apparaître ce qui cloche : un poste attribué dans GLPI à quelqu'un qui n'existe plus dans l'annuaire, une machine présente dans l'un mais absente de l'autre. C'est exactement le type de croisement que j'avais déjà pratiqué sur l'AD, transposé à un autre jeu de données.
+
+Ces deux missions, prises ensemble, m'ont appris quelque chose d'utile. La qualité des données n'est pas un sujet réservé aux grands projets décisionnels. C'est un travail de fond, permanent, qui concerne aussi les outils que la DSI utilise pour elle-même. Et c'est un travail qui n'est jamais vraiment fini.
+
+% =====================================================================
+% III. MISSION PRINCIPALE SPASER
+% =====================================================================
+\section{La mission principale, un entrepôt de données pour piloter la commande publique (SPASER)}
+Une fois les référentiels internes fiabilisés et la méthode acquise, sur l'AD comme sur GLPI, j'ai pu m'attaquer au cœur de mon alternance : la construction d'un entrepôt de données pour la commande publique. C'est cette mission que je développe dans cette dernière partie.
+
+\subsection{Le SPASER, un engagement politique qu'il faut pouvoir mesurer}
+Le point de départ de ce projet est le SPASER\lexref{2} (Schéma de Promotion des Achats Socialement et Écologiquement Responsables). Ce document, adopté pour 2024-2028 par Niort Agglo, la Ville de Niort et le CCAS, définit des objectifs pour rendre les achats publics plus responsables.
+
+Le SPASER définit des objectifs précis, organisés en quatre grands thèmes : Quelle part des marchés comporte une clause sociale ? Combien d'heures d'insertion sont générées chaque année ? Quelle proportion d'achats intègre un critère environnemental ? Quelle part des montants part vers des entreprises du territoire ou vers des structures de l'ESS\lexref{7} ? À cela s'ajoute la loi AGEC\lexref{1}, qui impose elle aussi ses indicateurs sur l'économie circulaire et le réemploi. Le détail des indicateurs et des objectifs chiffrés que l'entrepôt doit permettre de calculer est disponible en Annexe~4.
+
+En août 2025, la collectivité ne disposait pas encore d'outils centralisés pour calculer ces indicateurs automatiquement. La donnée existait, mais sous une forme peu exploitable, éparpillée entre un logiciel métier, des tableurs Excel, des fiches papier numérisées et plusieurs bases de données. Calculer la part des marchés «~responsables~» était complexe, car les données étaient incomplètes et désorganisées.
+
+Ma mission principale tient dans cette phrase : \textbf{construire l'outil qui manquait.} Au-delà de la seule réponse technique, ce projet s'inscrit dans la politique de gouvernance de la donnée portée par le SAVD : il ne s'agit pas seulement de calculer des indicateurs, mais de définir une source unique et faisant foi pour le suivi des achats responsables, à laquelle la Ville, l'Agglomération et le CCAS pourront se référer de la même manière.
+
+\rfig{fig_7.png}{0.80}{Les quatre axes et indicateurs de suivi annuel du SPASER de Niort Agglo, de la Ville de Niort et du CCAS.}
+
+\subsection{Une montée en compétence par paliers}
+J'ai commencé mon alternance en août 2025 sans aucune des compétences techniques que les projets allaient demander. Le BUT m'avait donné des bases solides en SQL, en Python et en manipulation de données, mais ces acquis restaient ceux de la salle de cours, appliqués à des jeux de données pensés pour l'exercice. L'outillage du décisionnel à l'échelle d'une collectivité, lui, m'était totalement étranger. Les cours de Talend\lexref{8} à l'IUT, je ne les ai eus qu'en octobre ; ceux de BusinessObjects\lexref{6}, encore plus tard, en S4. Autrement dit, quand j'ai franchi les portes de la DSI cet été-là, je ne savais ni ce qu'était un job Talend, ni comment se construisait un univers BO, ni comment ces outils s'enchaînaient pour transformer une base brute en indicateurs exploitables. Toute la difficulté des premiers mois a été là : apprendre à manier ces outils en situation réelle, sur de vraies données, avant même de les avoir rencontrés en formation.
+
+Mon premier mois a été décisif pour mon intégration, grâce à deux personnes en particulier. Ma tutrice, Valérie \textsc{Mallé}, a pris en charge l'installation et la configuration des outils principaux dont j'allais avoir besoin : l'accès à Toad pour la base Oracle, à Talend, à BusinessObjects, aux ressources internes du service. À ses côtés, j'ai eu la chance de partager le bureau de Léa, alternante de 3\textsuperscript{e} année qui terminait son contrat à la DSI. Pendant ce mois d'août passé en binôme, c'est elle qui m'a aidée à configurer mon environnement, à prendre en main les outils secondaires et à comprendre le fonctionnement de la DSI : où trouver quoi, à qui s'adresser pour quel sujet. Elle a été ma première interlocutrice technique avant son départ, et ce mois passé à ses côtés m'a donné les repères dont j'avais besoin pour la suite.
+
+C'est d'ailleurs pour cette raison que ma tutrice m'a d'abord confié la fiabilisation de l'Active Directory (détaillée en Partie II). Ce premier projet a été mon véritable terrain d'entraînement avant d'attaquer la complexité de la commande publique en mars 2026.
+
+Cette progression s'est faite par blocs, au rythme particulier de mon alternance. Mon temps à la DSI se concentre sur les vacances scolaires, le long bloc d'août à la rentrée, les intersessions de la Toussaint, de Noël, de février, puis sur la grande période qui suit la fin de mon année universitaire, le 31 mars. À chaque retour, je devais reprendre où je m'étais arrêtée, parfois plusieurs semaines plus tôt. D'où l'importance, acquise très vite, de documenter chaque ligne de code et chaque étape d'un job Talend. Ce rythme avait aussi un avantage que je n'ai mesuré qu'à l'usage : entre deux blocs à la DSI, j'avais le temps de digérer ce que j'avais appris, de revenir avec des questions plus précises, et parfois de voir en cours à l'IUT une notion qui éclairait rétroactivement un problème rencontré quelques semaines plus tôt à la DSI. Quand BusinessObjects est entré dans mon cursus en S4, j'avais déjà passé plusieurs blocs à voir construire et publier des univers ; le terrain était préparé.
+
+C'est à partir de mars 2026, équipée par les cours, par les premiers mois passés sur l'AD et par l'auto-formation, que je me suis attaquée au projet de commande publique. C'est cette mission, devenue ma mission principale, que je détaille dans la suite de cette partie.
+
+\subsection{Analyse des anomalies et limites de la base SEDIT}
+La source principale de mon projet, c'est SEDIT, le logiciel de gestion financière et de marchés publics édité par Berger-Levrault. C'est dans SEDIT que les agents saisissent les marchés. Plutôt que de travailler sur des fichiers exportés, j'ai exploité directement la base de données que SEDIT alimente, les tables où les données sont stockées. Et en explorant ces tables, marché par marché, j'ai découvert que la donnée était loin d'être prête.
+
+Le premier type de problème, c'étaient les trous. Pas des champs vides isolés : des tables entières non alimentées. La table censée décrire les accords-cadres était vide. Un accord-cadre est un marché qui ne fixe pas d'emblée toutes les commandes, mais pose un cadre, des prix, des prestations possibles, à l'intérieur duquel des commandes successives, appelées marchés subséquents, sont passées au fil du temps. C'est typiquement le cas du marché «~Fourniture de produits d'hygiène et d'entretien~», découpé en plusieurs lots et plusieurs périodes. Ce mode de fonctionnement, très courant dans la commande publique, était donc mal pris en charge par la base : le montant total hors taxes des marchés issus de ces accords-cadres n'était jamais renseigné. Une information attendue, une colonne prévue, et rien dedans.
+
+Le deuxième type de problème touchait les montants. Le montant maximum d'un marché ne se lisait pas directement : il fallait le reconstituer en allant chercher la bonne valeur parmi plusieurs colonnes concurrentes. J'ai aussi rencontré des cas où un champ annoncé en TTC contenait en réalité un montant hors taxes. Un montant qui existe mais qui n'est pas cohérent fausse un calcul.
+
+Le troisième concernait les périodes et reconductions. La durée réelle d'un marché, son nombre de périodes, n'était pas une donnée directement disponible ; il fallait la recalculer à partir du nombre de reconductions, souvent mal renseigné, voire absent dès qu'un marché avait été reconduit plusieurs fois. Un marché signé pour un an, mais reconductible trois fois, court en réalité sur quatre ans ; si les reconductions ne sont pas saisies, la base le croit terminé au bout d'un an alors qu'il est toujours actif.
+
+À cela s'ajoutait un comportement imprévisible que j'ai mis du temps à comprendre : une donnée ne «~remontait~» dans la base que si le marché disposait d'un numéro de dossier saisi côté logiciel métier. Sans ce numéro, l'information existait quelque part mais restait indisponible à l'analyse.
+
+Mais le problème le plus sérieux, c'était le SIRET\lexref{9}. Le numéro SIRET est l'identifiant unique d'un établissement d'entreprise. Sans SIRET, impossible de savoir qui est l'entreprise titulaire d'un marché, où elle se situe, si c'est une TPE\lexref{13} ou une PME\lexref{14}. Or ce SIRET était très fréquemment absent dans SEDIT.
+
+\rfig{fig_8.png}{0.90}{Fiche d'un accord-cadre dans SEDIT (marché «~Fourniture de produits d'hygiène et d'entretien~»), découpé en trois lots et plusieurs périodes de reconduction.}
+
+\subsection{Traduire le besoin politique en colonnes, cadrer le besoin}
+Ce diagnostic posé, restait à définir vers quoi construire. Avant d'écrire la moindre ligne de transformation, il fallait répondre à une question : \emph{de quelles données ai-je précisément besoin pour calculer chaque indicateur du SPASER ?}
+
+J'ai donc repris le schéma axe par axe. Pour l'axe social, calculer la part des marchés à clause sociale suppose de savoir, marché par marché, si une clause existe, de quel type, et combien d'heures d'insertion sont prévues et réalisées. Pour l'axe environnemental, c'est la présence de critères environnementaux, leur pondération, le recours à des produits réemployés ou recyclés. Chaque indicateur attendu se traduit, en remontant, par une liste de champs à aller chercher. Ce travail de traduction, d'un objectif politique vers une donnée concrète, a occupé une bonne partie de mes premières semaines sur le sujet.
+
+Ce cadrage, je ne l'ai pas fait seule. J'ai échangé régulièrement avec la direction de la commande publique lors de points d'étape dédiés. Ce sont eux qui connaissent la réalité du terrain : comment un marché est monté, où l'information est saisie, ce qui est fiable et ce qui ne l'est pas. Ces échanges m'ont évité plusieurs erreurs d'interprétation.
+
+Ils ont aussi fait apparaître une difficulté que je n'avais pas anticipée. Une partie des informations du SPASER ne se trouve pas dans SEDIT. Elle vit dans des fiches de recensement que les agents remplissent à la main pour chaque marché. Ces fiches étaient propres individuellement, mais éparpillées dans des dossiers, sans aucune centralisation. Pour en tirer un indicateur, il aurait fallu les ouvrir une par une et recopier leur contenu, des heures de copier-coller, à refaire à chaque mise à jour. C'est de ce constat précis qu'est né le premier outil que j'ai développé.
+
+L'architecture cible que j'ai mise en place suit une logique classique en décisionnel. La donnée part de la base SEDIT. Elle transite par des flux Talend\lexref{8}, qui l'extraient, la transforment et la chargent. Sa destination est une base de données Oracle structurée en deux étages : un ODS\lexref{10} (Operational Data Store), qui sert d'étape intermédiaire de nettoyage, puis un DWH\lexref{11} (Data Warehouse), qui contient la donnée propre, organisée pour l'analyse. Par-dessus cet entrepôt, j'ai travaillé sur un univers BusinessObjects, la couche sémantique qui traduit les tables techniques en termes métier compréhensibles, pour qu'un agent de la commande publique puisse construire ses rapports sans coder.
+
+\rfig{fig_9.png}{0.88}{Architecture de l'entrepôt de données commande publique : Base SEDIT $\rightarrow$ Talend $\rightarrow$ Oracle (ODS / DWH) $\rightarrow$ univers BusinessObjects $\rightarrow$ rapports utilisateurs.}
+
+\subsection{Automatiser la collecte des fiches SPASER, un script Python pour les agents}
+Le besoin était clair : transformer une pile de fiches de recensement éparpillées en un tableau unique, propre et à jour, sans demander aux agents le moindre copier-coller. J'ai répondu à ce besoin en développant un script complet en Python, en utilisant principalement les bibliothèques \texttt{openpyxl} pour la manipulation des fichiers Excel et \texttt{tkinter} pour l'interface graphique.
+
+Le défi n'était pas seulement technique. L'outil devait être utilisable par un agent de la commande publique qui ne code pas, et qui n'a aucune raison de coder. J'ai donc doté le script d'une interface graphique volontairement minimaliste. Le fonctionnement, vu par l'utilisateur, tient en trois gestes : il lance l'outil, il clique sur un bouton, il sélectionne le dossier contenant les fiches.
+
+En arrière-plan, le programme parcourt l'ensemble des fiches du dossier, lit leur contenu, puis nettoie les critères durables, par exemple en convertissant les «~oui~» et «~non~» saisis de façon variable en valeurs homogènes et exploitables. Il crée également, pour chaque marché, un lien hypertexte cliquable qui renvoie directement vers la fiche source, de façon à garder la traçabilité. Enfin, il génère un tableau Excel récapitulatif centralisé : une ligne par marché, des colonnes propres, prêt à être analysé. Ce qui prenait des jours de saisie manuelle se fait désormais en quelques secondes.
+
+L'outil est installé sur le réseau de la collectivité, dans l'arborescence des applications de la DSI. Ce choix n'est pas anodin : en le plaçant là, je m'assure qu'il reste accessible et utilisable après la fin de mon alternance. Le code est par ailleurs rigoureusement commenté pour qu'un autre agent puisse le reprendre. Le code source du script est disponible en Annexe.
+
+\rfig{fig_12.png}{0.92}{Tableau Excel récapitulatif généré automatiquement par le script (une ligne par marché, liens hypertextes vers les fiches sources).}
+
+\subsection{Alimenter l'entrepôt, la construction des flux Talend}
+En parallèle de cet outil dédié aux fiches, j'ai construit les traitements Talend qui alimentent l'entrepôt Oracle. C'est ici que se règle une bonne partie des anomalies évoquées plus haut. Le modèle de données de cet entrepôt, illustré par le schéma de la base Oracle, organise l'information en tables de faits et de dimensions, prêtes pour le calcul des indicateurs.
+
+\subsubsection{De SEDIT vers l'ODS, puis vers le DWH}
+L'alimentation s'articule en deux étapes successives. Un premier job extrait les données de la base SEDIT et les charge dans l'ODS, l'entrepôt intermédiaire où s'effectuent les nettoyages et les contrôles. Un second job pousse les données nettoyées de l'ODS vers le DWH, l'entrepôt final d'analyse.
+
+Concrètement, chaque flux applique une série de transformations avant le chargement : contrôle des champs obligatoires, normalisation des libellés, reconstruction des montants à partir des bonnes colonnes, mise en cohérence des dates et des reconductions, gestion des types de données. La capture du composant tMap illustre ce processus : on y observe la jointure sur les identifiants d'environnement et le traitement conditionnel des montants, destiné à éviter l'insertion de valeurs nulles en base.
+
+L'idée directrice est simple : aucune donnée ne doit entrer dans l'entrepôt sans avoir été contrôlée. Une donnée fausse qui passe inaperçue fausse un indicateur, et un indicateur faux peut fausser une décision.
+
+J'ai aussi veillé à ce que ces flux soient rejouables. Ils sont conçus pour tourner régulièrement et recharger l'entrepôt avec les marchés les plus récents, sans intervention manuelle. L'automatisation n'est pas un confort : c'est une condition de fiabilité dans la durée.
+
+\rfig{fig_10.png}{0.92}{Exemple de traitement, de nettoyage et de jointure dans un composant tMap (Talend).}
+
+\subsubsection{Le croisement avec l'API Sirene et la gestion des limites de requêtes}
+J'en arrive au point qui m'a le plus occupée, et le plus appris.
+
+Pour calculer une partie centrale des indicateurs SPASER, il faut connaître la nature et la localisation des entreprises titulaires : est-ce une TPE\lexref{13}, une PME\lexref{14}, une structure de l'ESS ? Est-elle implantée sur le territoire de Niort Agglo, dans les Deux-Sèvres, en Nouvelle-Aquitaine, ou sur le territoire national, voire international ?
+
+Cette information, SEDIT ne la contient pas. Elle existe en revanche dans la base Sirene de l'INSEE, le répertoire national des entreprises, que l'INSEE met à disposition via une API\lexref{12}, un service qu'un programme peut interroger automatiquement. La logique paraît donc simple : pour chaque marché, je prends le SIRET du titulaire, je l'envoie à l'API Sirene, et je récupère en retour la taille, la forme juridique et la commune.
+
+Sauf que cette logique reposait entièrement sur le SIRET. Et le SIRET, je l'ai dit, manquait souvent. Toute la difficulté était là : comment identifier une entreprise quand son identifiant unique est absent ou erroné ?
+
+J'ai donc dû concevoir un système de rapprochement plus élaboré qu'un simple appel d'API. Quand le SIRET est présent et valide, l'interrogation est directe : la requête part vers l'API et la réponse alimente la table \texttt{FAIT\_INSEE\_ENTREPRISE}. Quand le SIRET manque ou paraît douteux, le programme bascule sur une logique de rapprochement à partir des autres informations disponibles (raison sociale, éléments d'adresse), avec un travail préalable de nettoyage pour homogénéiser ces champs avant comparaison.
+
+Mais le vrai obstacle n'était pas dans la logique. Il était dans le comportement de l'API elle-même. Quand on interroge l'API Sirene à grande échelle, plusieurs centaines, voire milliers d'appels d'affilée, l'INSEE détecte le rythme et finit par considérer les requêtes comme provenant d'un robot. Conséquence : l'API renvoie une erreur \emph{Bad Gateway} et refuse de répondre, le temps que la pression retombe. Concrètement, sur un même lot de SIRET, certains revenaient correctement enrichis et d'autres ressortaient en échec, non pas parce que l'entreprise n'existait pas, mais parce que la requête avait été bloquée.
+
+J'ai donc conçu une \textbf{logique en deux passages} pour absorber ce comportement.
+
+Le premier job (\texttt{CMP\_IMPORT\_DATA\_ESS\_1.0.1}) extrait le référentiel fournisseurs depuis la base, le nettoie, puis lance pour chaque ligne un appel à l'API Sirene via le composant \texttt{tHttpRequest}. Les réponses valides sont parsées (\texttt{tExtractJSONFields}), filtrées et chargées dans la table \texttt{FAIT\_INSEE\_ENTREPRISE} du DWH. Les SIRET pour lesquels l'API a échoué, typiquement les \emph{Bad Gateway}, ne sont pas perdus : ils sortent par une branche dédiée (\texttt{tMap\_2}) et sont stockés dans un fichier de rejet \texttt{Rejets\_api\_insee.csv}.
+
+Le second job (\texttt{CMP\_IMPORT\_DATA\_ESS\_2.0.1}) reprend exactement ce fichier de rejet. Il relit le CSV des SIRET non identifiés et relance, pour chacun, un appel à l'API Sirene. Une seule chose change, mais elle est essentielle : j'ai ajouté un composant \texttt{tSleep} en amont des requêtes, qui temporise les appels et évite que l'API ne nous détecte à nouveau comme un robot. Les SIRET enfin identifiés viennent compléter la table de faits ; ceux qui échouent encore sont stockés dans \texttt{Rejets\_api\_insee\_v2.csv} pour une analyse manuelle ultérieure.
+
+Ce mécanisme à deux étages n'est pas spectaculaire à décrire, mais il constitue un véritable mécanisme de résilience face à une contrainte de limitation de débit : il a transformé un processus qui échouait sur 20 à 30~\% des fournisseurs en une chaîne qui en récupère désormais la majorité, sans aucune reprise manuelle. C'est typiquement le genre de problème qu'on ne voit dans aucun cours, et qu'on n'apprend à résoudre qu'en se cognant aux limites concrètes d'un service réel.
+
+\rfig{fig_13.png}{0.95}{Job Talend \texttt{CMP\_IMPORT\_DATA\_ESS\_1.0.1} : premier passage d'interrogation de l'API Sirene et chargement de la table \texttt{FAIT\_INSEE\_ENTREPRISE}.}
+
+\rfig{fig_14.png}{0.92}{Job Talend \texttt{CMP\_IMPORT\_DATA\_ESS\_2.0.1} : second passage avec temporisation (\texttt{tSleep}) pour reprendre les SIRET bloqués par le filtre anti-robot de l'API.}
+
+\subsection{Restitution sous BusinessObjects et premiers résultats}
+Une fois la donnée propre dans l'entrepôt, restait à la rendre utilisable. C'est le rôle de l'univers BusinessObjects. J'ai construit la couche sémantique : les dimensions (marché, titulaire, période, type de clause), les indicateurs (nombre de marchés, montant total, heures d'insertion), et les jointures entre les tables du DWH. Le modèle relationnel de cette fondation de données, organisé en schéma en étoile autour des tables de faits du SPASER, traduit les tables techniques en objets que les agents peuvent manipuler directement. Cette couche sémantique permet à chaque agent de construire ses propres rapports sans écrire de requête.
+
+Comme Thomas l'avait expérimenté avant moi sur un autre projet, certains indicateurs de comptage se sont mal agrégés, un problème classique de fonction de projection BO sur les \texttt{count}. J'ai modifié la fonction de projection pour les corriger. La limite par défaut de 5\,000 lignes affichées, qui aurait empêché d'analyser de gros volumes de marchés, a également été levée dans l'Outil de Conception d'Information.
+
+Au terme de cette première année, la collectivité dispose de quelque chose qu'elle n'avait pas : une chaîne complète, de la donnée brute jusqu'à l'indicateur. Les fiches SPASER sont centralisées automatiquement, l'entrepôt Oracle se remplit via les flux Talend, et les données de la commande publique y sont enfin propres et croisables. Les premiers indicateurs du SPASER peuvent être calculés, part des marchés à clause sociale, répartition des achats par type d'entreprise et par localisation, et les premiers éléments de restitution sont en place côté BusinessObjects. Une partie de l'ensemble est en phase de test, ouverte aux premiers utilisateurs pour validation. Le travail n'est pas terminé : la construction des tableaux de bord les plus aboutis se poursuit. Mais le socle, lui, existe.
+
+\rfig{fig_11.png}{0.72}{Fondation de données dans l'Outil de Conception d'Information (BusinessObjects) détaillant les liens entre tables de faits et dimensions.}
+
+% =====================================================================
+% CONCLUSION
+% =====================================================================
+\newpage
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+L'enjeu principal de ce rapport était de démontrer comment structurer des données hétérogènes pour construire un outil de pilotage des achats responsables. Après cette première année, le projet n'est pas encore terminé, mais j'ai assez de recul pour faire le bilan de ce qui a été accompli et de ce qui reste à faire l'an prochain.
+
+Au départ, il n'existait aucun moyen de calculer les indicateurs du SPASER. Aujourd'hui, ce moyen existe. Les fiches de recensement sont centralisées automatiquement par un script Python doté d'une interface accessible aux agents non techniques. L'entrepôt Oracle s'alimente via les flux Talend, en deux étages ODS et DWH, avec un nettoyage systématique des montants, des périodes et des libellés. Les fournisseurs sont identifiés et localisés grâce au croisement avec l'API Sirene, malgré le comportement anti-robot de cette dernière, contourné par un mécanisme à deux passages. La couche sémantique BusinessObjects donne enfin aux agents un accès direct à leurs propres indicateurs. Le socle est là.
+
+Que rapporte concrètement ce travail ? Le gain le plus tangible est du temps. Auparavant, centraliser les fiches de recensement était un travail entièrement manuel : pour un lot d'une trentaine de fiches, il fallait compter environ deux jours de saisie, parce que les coordinatrices ne se contentent pas de recopier, elles vérifient la cohérence entre chaque fiche et les marchés correspondants dans SEDIT. Mon script fait désormais cette collecte en quelques secondes, tout en conservant un lien vers la fiche source pour garder cette vérification possible. À l'échelle d'une année et des mises à jour régulières, ce sont plusieurs jours de travail rendus chaque mois aux acheteurs, du temps qu'ils peuvent réinvestir sur leur véritable métier plutôt que sur du copier-coller.
+
+Mais les bénéfices ne se limitent pas à ce gain de temps. Avant, la collectivité savait qu'elle dépensait 70 millions d'euros par an, sans pouvoir dire précisément quelle part servait l'insertion, l'économie locale ou l'environnement. Désormais, ces chiffres existent, fiables, et calculés de la même façon d'une année sur l'autre. L'entrepôt donne aux élus et aux acheteurs les moyens de vérifier si les engagements du SPASER sont tenus, et d'ajuster leur politique d'achat en conséquence. Une dépense qui était auparavant subie (sans contrôle) devient une dépense que l'on peut orienter vers des objectifs précis.
+
+Mais je ne veux pas présenter ce travail comme un succès sans nuance. Plusieurs choses restent à faire, et la bonne nouvelle, c'est que c'est précisément ce qui m'attend en 3\textsuperscript{e} année. La construction des tableaux de bord aboutis, ceux qui parleront vraiment aux élus, reste largement à mener. L'entrepôt a été pensé pour aller plus loin que le seul SPASER, en intégrant à terme le suivi de l'exécution des marchés et l'analyse des familles d'achat ; cette extension est ouverte, mais pas encore réalisée. Le croisement avec l'API Sirene fonctionne, mais quand un SIRET est complètement absent à la source, mon système de rapprochement fait de son mieux sans rien garantir. La perspective de continuer ce projet jusqu'en juillet 2027, dans le cadre de la deuxième année de mon contrat, rend possible la livraison d'un outil complet plutôt qu'un simple prototype.
+
+Cependant, un outil de restitution, aussi bien construit soit-il, ne corrige pas la donnée à sa source. Si un agent saisit mal un marché dans SEDIT, si un SIRET n'est pas renseigné, aucun script ne fera apparaître une information qui n'a jamais existé. Mes outils traitent les conséquences ; ils ne suppriment pas la cause. C'est pour cela que le projet d'acculturation à la donnée mené par le SAVD a tout son sens, et c'est probablement la leçon la plus utile que je retire de cette année. Quant à mes missions sur l'AD et GLPI, le constat est le même : j'ai fourni aux équipes des états des lieux fiables, des listes priorisées d'incohérences. La correction leur appartient, et la qualité des données n'est jamais un travail achevé.
+
+% =====================================================================
+% BILAN
+% =====================================================================
+\section*{Bilan professionnel et personnel}
+\addcontentsline{toc}{section}{Bilan professionnel et personnel}
+
+\subsection*{Bilan professionnel}
+Cette première année d'alternance a été ma véritable insertion dans le monde de la donnée appliquée. J'ai mobilisé une grande partie des compétences techniques apprises au BUT (bases de données, ETL, programmation, conception décisionnelle), et j'ai surtout appris à les faire tenir ensemble sur un projet réel. La modélisation d'un entrepôt, les flux Talend, le SQL et la base Oracle, le développement en Python, l'interrogation d'une API, la restitution sous BusinessObjects : pris isolément, j'avais déjà croisé ces notions en cours. Les enchaîner pour former une chaîne complète, de la donnée brute jusqu'à l'indicateur, a été le véritable défi technique de cette année.
+
+Cette année m'a particulièrement révélé la valeur du rythme de l'alternance. J'ai souvent appris à la DSI ce que j'allais voir en cours quelques semaines, voire quelques mois plus tard, Talend dès l'automne, BusinessObjects à partir du second semestre. Ce décalage régulier m'a poussée à être proactive et à chercher des solutions techniques par moi-même avant même de les aborder de façon académique. Quand les cours arrivaient à l'IUT, j'avais déjà les images mentales pour les comprendre ; et inversement, ce que je découvrais en cours venait éclairer des choses que j'avais expérimentées.
+
+J'ai aussi mesuré, à une échelle que je n'avais jamais connue, tout un pan du travail qui tient peu de place dans les cours : se confronter à une API qui vous bloque en pleine production, comprendre pourquoi un montant censé être TTC contient en réalité du HT, construire une interface assez simple pour qu'un agent l'utilise sans qu'on lui explique. J'avais rencontré ces notions en TD, mais les affronter sur des données réelles, dans la durée, avec de vrais utilisateurs en face, leur donne un tout autre poids. Ces situations m'ont appris que, dans la vie professionnelle, une bonne moitié du travail consiste à comprendre pourquoi un problème existe, avant même de pouvoir le résoudre.
+
+J'ai compris également l'importance de la documentation. Pendant cette année, j'ai pris l'habitude, par contrainte d'abord, puis par conviction, de commenter mon code, d'écrire dans Talend des notes décrivant chaque étape, et de tenir à jour la description du modèle de données et de l'arborescence de mes outils. Le rythme de l'alternance, avec ses allers-retours entre l'IUT et la DSI, oblige à cette rigueur : reprendre un flux Talend ou un script après plusieurs jours d'absence sans documentation, c'est perdre une demi-journée à chaque fois. Avec le recul, cette contrainte a eu un effet que je n'avais pas anticipé : elle m'a poussée à livrer non pas une boîte noire que j'aurais été seule à savoir faire tourner, mais un ensemble reprenable, dont la logique est tracée et dont un autre agent du service pourrait s'emparer. Pour une mission qui se poursuit sur deux ans et dont les livrables doivent survivre à mon départ, cette transmissibilité compte autant que le résultat lui-même.
+
+Mes meilleurs interlocuteurs sur le projet SPASER n'étaient pas des informaticiens. C'étaient des agents de la commande publique, des acheteurs, des personnes qui connaissent les marchés publics infiniment mieux que moi, mais qui n'écriront jamais une ligne de code. J'ai appris à les écouter pour comprendre un métier que je ne connaissais pas, et à leur expliquer le mien sans jargon. Cette capacité à faire le pont entre la donnée et le métier, je ne l'avais pas mesurée avant cette année ; je sais maintenant qu'elle compte autant que la technique.
+
+Cette année m'a aussi fait comprendre que la technique, ici, n'est jamais neutre. Construire un entrepôt de données pour la commande publique, ce n'est pas seulement empiler des tables et des flux. C'est donner à une collectivité le moyen concret de tenir un engagement politique. Tant que les indicateurs du SPASER ne pouvaient pas être calculés, les objectifs votés par les élus restaient des intentions sur le papier. En rendant ces chiffres mesurables, l'entrepôt transforme une volonté politique en quelque chose de vérifiable et de pilotable : on peut enfin dire si la part des marchés à clause sociale progresse, si l'argent public soutient réellement les entreprises du territoire. J'ai compris que mon travail technique, aussi discret soit-il, est ce qui donne à la collectivité le pouvoir réel de diriger ses achats vers ce qui compte pour elle. C'est une responsabilité que je n'avais pas mesurée en arrivant.
+
+\subsection*{Bilan personnel}
+Avant de commencer, j'avais des appréhensions. Une alternance sur deux années entières dans une collectivité, sur un projet de cette ampleur, je n'étais pas certaine d'être capable de la tenir. Ces craintes se sont dissipées progressivement.
+
+D'abord, parce que j'ai trouvé dans ce travail un sens auquel je tenais. Voir un script qu'on a écrit faire gagner des jours à un agent qui passait son lundi matin à recopier des fiches, c'est concret. Savoir que les indicateurs qu'on construit serviront aux élus pour décider de leur politique d'achat, c'est encore plus concret. J'avais voulu faire mon alternance dans le service public pour qu'elle ait de l'utilité ; je n'ai pas été déçue.
+
+J'ai aussi appris à composer avec le tempo particulier d'une alternance par blocs. Je suis arrivée en août 2025 sans avoir encore eu les cours qui m'auraient préparée au projet, et c'est en avançant par paliers, des premiers mois sur l'Active Directory jusqu'au démarrage de la mission SPASER, que je me suis construit une assise. Avec le recul, ce démarrage progressif, que j'avais d'abord vécu comme un retard, a été une chance : il m'a laissé le temps d'apprendre les outils sur une mission d'entraînement avant de les engager sur l'enjeu principal.
+
+Ensuite, parce que cette année m'a confortée dans le choix de mes études. Le parcours VCOD que j'ai choisi m'a parfaitement préparée à ce type de mission, et je me sens plus solide qu'à mon arrivée pour aborder la troisième année et la suite.
+
+Cette alternance m'a également appris quelque chose de simple : il est normal de ne pas tout savoir. J'ai posé énormément de questions cette année. J'ai parfois craint d'avoir l'air de ne pas comprendre. Avec le recul, je vois bien que les meilleures avancées sont venues des moments où j'ai posé ces questions.
+
+La 3\textsuperscript{e} année qui m'attend à la DSI me permettra de consolider ce socle technique : construction de tableaux de bord plus avancés, extension de l'entrepôt à d'autres univers de données, et mise en production d'un outil complet. J'aborde cette suite avec une vision beaucoup plus claire des exigences du métier et de l'importance de la rigueur au quotidien.
+
+% =====================================================================
+% LEXIQUE
+% =====================================================================
+\newpage
+\section*{Lexique}
+\addcontentsline{toc}{section}{Lexique}
+\begin{description}[leftmargin=2.2em,style=nextline,itemsep=4pt]
+\item[\hypertarget{lex:1}{}\textsuperscript{1} Loi AGEC] Loi Anti-Gaspillage pour une Économie Circulaire, adoptée en France en février 2020. Elle impose notamment aux acteurs publics des obligations sur le réemploi, la réduction des plastiques à usage unique et l'achat de produits issus du réemploi ou de la réutilisation.
+\item[\hypertarget{lex:2}{}\textsuperscript{2} SPASER] Schéma de Promotion des Achats Socialement et Écologiquement Responsables. Document stratégique que les collectivités dépassant un certain seuil d'achats publics annuels doivent adopter, et dans lequel elles fixent des objectifs chiffrés en matière d'achats socialement et écologiquement responsables.
+\item[\hypertarget{lex:3}{}\textsuperscript{3} Active Directory (AD)] Service d'annuaire développé par Microsoft pour les systèmes Windows. Il centralise la gestion des identités, des accès et des ressources d'un système d'information (utilisateurs, machines, groupes, droits).
+\item[\hypertarget{lex:4}{}\textsuperscript{4} GLPI] Gestionnaire Libre de Parc Informatique. Logiciel open source de gestion de services informatiques. Il sert à inventorier le matériel et les logiciels d'un parc et à gérer l'assistance aux utilisateurs via un système de tickets.
+\item[\hypertarget{lex:5}{}\textsuperscript{5} RGPD] Règlement Général sur la Protection des Données. Règlement européen entré en application en mai 2018, qui encadre le traitement des données à caractère personnel sur le territoire de l'Union européenne.
+\item[\hypertarget{lex:6}{}\textsuperscript{6} BusinessObjects (BO)] Suite logicielle d'informatique décisionnelle éditée par SAP. Elle permet la conception d'univers sémantiques au-dessus des bases de données et la création de rapports et de tableaux de bord par les utilisateurs métier.
+\item[\hypertarget{lex:7}{}\textsuperscript{7} ESS] Économie Sociale et Solidaire. Ensemble d'entreprises et de structures (associations, coopératives, mutuelles, fondations, entreprises d'insertion) dont l'activité économique vise une finalité sociale, environnementale ou solidaire avant la maximisation du profit.
+\item[\hypertarget{lex:8}{}\textsuperscript{8} Talend] Logiciel ETL (Extract, Transform, Load) qui permet de concevoir graphiquement des chaînes d'intégration de données. Chaque chaîne, appelée \emph{job}, extrait des données d'une source, leur applique des transformations puis les charge dans une destination.
+\item[\hypertarget{lex:9}{}\textsuperscript{9} SIRET] Identifiant à 14 chiffres attribué par l'INSEE à chaque établissement d'entreprise en France. Il est composé du numéro SIREN (9 chiffres) identifiant l'entreprise, et d'un code NIC (5 chiffres) identifiant l'établissement.
+\item[\hypertarget{lex:10}{}\textsuperscript{10} ODS] Operational Data Store. Étape intermédiaire d'un entrepôt de données dans laquelle les données issues de plusieurs sources sont consolidées et nettoyées avant d'être intégrées dans le DWH.
+\item[\hypertarget{lex:11}{}\textsuperscript{11} DWH] Data Warehouse, ou entrepôt de données. Base de données structurée organisée pour l'analyse, dans laquelle les données sont stockées sur le long terme et utilisées à des fins décisionnelles.
+\item[\hypertarget{lex:12}{}\textsuperscript{12} API] Application Programming Interface, ou interface de programmation. Service qui permet à un programme informatique d'interroger automatiquement un autre système, ici, la base Sirene de l'INSEE, selon un protocole défini.
+\item[\hypertarget{lex:13}{}\textsuperscript{13} TPE] Très Petite Entreprise. Catégorie d'entreprise définie par l'INSEE et la réglementation européenne, regroupant les structures employant moins de 10 salariés et dont le chiffre d'affaires annuel ou le total de bilan n'excède pas 2 millions d'euros. On parle aussi de micro-entreprise au sens statistique.
+\item[\hypertarget{lex:14}{}\textsuperscript{14} PME] Petite et Moyenne Entreprise. Catégorie d'entreprise employant moins de 250 salariés et dont le chiffre d'affaires annuel n'excède pas 50 millions d'euros, ou dont le total de bilan n'excède pas 43 millions d'euros. Dans le cadre du SPASER, distinguer les TPE et PME des grands groupes permet de mesurer la part des marchés attribués aux entreprises de proximité.
+\end{description}
+
+% =====================================================================
+% SITOGRAPHIE
+% =====================================================================
+\newpage
+\section*{Sitographie}
+\addcontentsline{toc}{section}{Sitographie}
+
+\subsubsection*{Introduction}
+Vie publique. \emph{Qu'est-ce qu'un SPASER ?} [Article en ligne], publié en 2022. Disponible sur : \url{https://www.vie-publique.fr}\\[3pt]
+Ministère de l'Économie. \emph{Loi AGEC : ce que la loi prévoit.} [Article en ligne]. Disponible sur : \url{https://www.economie.gouv.fr}
+
+\subsubsection*{I. Présentation de la structure d'accueil}
+Communauté d'Agglomération du Niortais. \emph{Site officiel de Niort Agglo} [Site en ligne]. Disponible sur : \url{https://www.niortagglo.fr}
+
+\subsubsection*{II. La fiabilisation des référentiels (AD et GLPI)}
+GLPI Project. \emph{Documentation GLPI} [Site en ligne]. Disponible sur : \url{https://glpi-project.org/fr/}\\[3pt]
+Microsoft Learn. \emph{Active Directory Domain Services Overview} [Site en ligne]. Disponible sur : \url{https://learn.microsoft.com}
+
+\subsubsection*{III. La mission principale (SPASER)}
+Niort Agglo, Ville de Niort, CCAS. \emph{Schéma de Promotion des Achats Socialement et Écologiquement Responsables 2024-2028.} Document de référence interne.\\[3pt]
+INSEE. \emph{API Sirene, documentation} [Site en ligne]. Disponible sur : \url{https://api.insee.fr/catalogue/}\\[3pt]
+Talend / Qlik. \emph{Documentation Talend Open Studio} [Site en ligne]. Disponible sur : \url{https://help.talend.com}
+
+\subsubsection*{Lexique}
+CNIL. \emph{RGPD : de quoi parle-t-on ?} [Article en ligne]. Disponible sur : \url{https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on}\\[3pt]
+LeMagIT. \emph{Entrepôt de données, Data Lake, Data Mart, ODS : que choisir ?} [Article en ligne], publié le 9 août 2018.
+
+% =====================================================================
+% ANNEXE
+% =====================================================================
+\newpage
+\section*{Annexe}
+\addcontentsline{toc}{section}{Annexe}
+
+\subsection*{Annexe 1 --- Organisation générale de Niort, Agglo, CCAS}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.88\linewidth,keepaspectratio]{fig_15.png}
+\caption{Organisation générale de Niort, de l'Agglomération et du CCAS (réaffectation des directions rattachées au DGS).}
+\end{figure}
+
+\subsection*{Annexe 2 --- Organisation du pôle ressources}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.88\linewidth,keepaspectratio]{fig_16.png}
+\caption{Organisation du pôle ressources, dont dépend la DSI.}
+\end{figure}
+
+\subsection*{Annexe 3 --- Extrait du code source du script Python}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.80\linewidth,keepaspectratio]{script_spaser.png}
+\caption{Extrait du code source du script Python d'automatisation des fiches SPASER (bibliothèques \texttt{openpyxl}, \texttt{tkinter}, \texttt{glob}).}
+\end{figure}
+
+\subsection*{Annexe 4 --- Indicateurs chiffrés du SPASER}
+Le détail des quatre axes et des indicateurs de suivi annuel est présenté à la Figure~7.
+
+\end{document}
